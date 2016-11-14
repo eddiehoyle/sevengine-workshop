@@ -21,6 +21,7 @@ add_definitions(${Qt5Widgets_DEFINITIONS})
 # Find packages
 find_package(OpenGL REQUIRED)
 find_package(Qt5Widgets REQUIRED)
+find_package(SOIL REQUIRED)
 
 # Includes
 include_directories(${Qt5Widgets_INCLUDE_DIRS})
@@ -33,18 +34,15 @@ set(SEV_LIB ${SEV_ROOT}/lib/libsev.a)
 include_directories(${SEV_INCLUDE_DIR})
 
 # Source files
-file(GLOB_RECURSE SOURCE_FILES "*.cc" "*.hh"
-        ${CMAKE_SOURCE_DIR}/src/examples/01_triangle/Example.cc
-        ${CMAKE_SOURCE_DIR}/src/examples/01_triangle/Example.hh
-        ${CMAKE_SOURCE_DIR}/src/examples/02_rect/Example.cc
-        ${CMAKE_SOURCE_DIR}/src/examples/02_rect/Example.hh)
+file(GLOB_RECURSE SOURCE_FILES "*.cc" "*.hh")
 
-add_executable(${APP} ${SOURCE_FILES} src/ui/Window.cc src/ui/Window.hh src/ui/GLWidget.cc src/ui/GLWidget.hh src/examples/AbstractExample.cc src/examples/AbstractExample.hh src/examples/02_rect/Example.cc src/examples/02_rect/Example.hh src/examples/Examples.hh)
+add_executable(${APP} ${SOURCE_FILES})
 
 #Link the helloworld executable to the Qt 5 widgets library.
 target_link_libraries(${APP}
         ${Qt5Widgets_LIBRARIES}
         ${OPENGL_LIBRARIES}
+        ${SOIL_LIBRARY}
         ${SEV_LIB})
 
 # If Apple...

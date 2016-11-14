@@ -1,7 +1,7 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include "GLWidget.hh"
+#include "_GLWidget.hh"
 #include <QOpenGLWidget>
 #include <QVBoxLayout>
 #include <QMainWindow>
@@ -14,13 +14,37 @@ enum ExampleType {
     kExampleRectTextured = 2,
 };
 
-class Window : public QMainWindow {
-//class Window : public QOpenGLWindow,
-//               protected QOpenGLFunctions {
+//class Window : public QMainWindow
+//{
+//    Q_OBJECT
+//
+//public:
+//    Window();
+//
+//private:
+//    void setExperiment( ExampleType type );
+//    void cleanup();
+//
+//private:
+//    QOpenGLWidget* m_gl;
+//    QVBoxLayout* m_layout;
+//
+//    QSurfaceFormat m_format;
+//
+//
+//public slots:
+//
+//    void change( int );
+//
+//};
+
+
+class MainWindow : public QMainWindow
+{
     Q_OBJECT
 
 public:
-    Window();
+    MainWindow();
 
 private:
     void setExperiment( ExampleType type );
@@ -30,13 +54,8 @@ private:
     QOpenGLWidget* m_gl;
     QVBoxLayout* m_layout;
 
-    QSurfaceFormat m_format;
-
-
 public slots:
-
     void change( int );
-
 };
 
 #endif // WINDOW_H

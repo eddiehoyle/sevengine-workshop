@@ -14,26 +14,37 @@
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
 
-namespace E02 {
-    class Example;
-}
+#include <sev/core/Shader.hh>
+#include <sev/graphics/Texture.hh>
+#include <sev/graphics/render/RenderRect.hh>
+
+//namespace E02 {
+//    class Example;
+//}
 
 namespace E02 {
+
 
 class Example
         : public QOpenGLWidget,
-          protected QOpenGLFunctions {
+          protected QOpenGLFunctions
+{
 
 public:
-    explicit Example(QWidget *parent = NULL);
+    explicit Example( QWidget* parent = NULL );
+    ~Example();
 
     void initializeGL() Q_DECL_OVERRIDE;
-
+    void resizeGL( int width, int height ) Q_DECL_OVERRIDE;
     void paintGL() Q_DECL_OVERRIDE;
 
 public slots:
-
     void cleanup();
+
+private:
+    Shader* m_shader;
+    Texture* m_texture;
+    RenderRect* m_render;
 
 };
 

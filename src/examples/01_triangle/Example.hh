@@ -13,9 +13,9 @@
 
 #include <sev/core/Shader.hh>
 
-namespace E01 {
-    class Example;
-}
+//namespace E01 {
+//    class Example;
+//}
 
 namespace E01 {
 
@@ -26,13 +26,11 @@ class Example
 
 public:
     explicit Example( QWidget* parent = NULL );
+    ~Example();
 
     void initializeGL() Q_DECL_OVERRIDE;
     void resizeGL( int width, int height ) Q_DECL_OVERRIDE;
     void paintGL() Q_DECL_OVERRIDE;
-
-private:
-    void printContextInformation();
 
 public slots:
     void cleanup();

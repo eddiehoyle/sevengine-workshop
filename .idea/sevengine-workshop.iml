@@ -5,28 +5,29 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/02_rect/Example.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/02_rect/Example.hh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/AbstractExample.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/AbstractExample.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/01_triangle/Example.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/01_triangle/Example.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/Examples.hh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/ui/GLWidget.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/ui/GLWidget.hh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/ui/Window.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/ui/Window.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ui/_GLWidget.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ui/_Window.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ui/MainWindow.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ui/_GLWidget.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ui/MainWindow.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ui/_Window.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Util.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug/sev-workshop_automoc.cpp">
-      <sourceFolder url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug/sev-workshop_automoc.cpp" isTestSource="false" />
+    <content url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug/sev-workshop_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug/sev-workshop_automoc.cpp" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel/sev-workshop_automoc.cpp">
-      <sourceFolder url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel/sev-workshop_automoc.cpp" isTestSource="false" />
+    <content url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel/sev-workshop_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel/sev-workshop_automoc.cpp" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo/sev-workshop_automoc.cpp">
-      <sourceFolder url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo/sev-workshop_automoc.cpp" isTestSource="false" />
+    <content url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo/sev-workshop_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo/sev-workshop_automoc.cpp" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release/sev-workshop_automoc.cpp">
-      <sourceFolder url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release/sev-workshop_automoc.cpp" isTestSource="false" />
+    <content url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release/sev-workshop_automoc.cpp">
+      <sourceFolder url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release/sev-workshop_automoc.cpp" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
@@ -60,7 +61,7 @@
           <root url="file:///System/Library/Frameworks/StoreKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Kerberos.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreGraphics.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/SceneKit.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/CoreBluetooth.framework/Headers" />
           <root url="file:///System/Library/Frameworks/EventKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/JavaFrameEmbedding.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ICADevices.framework/Headers" />
@@ -68,13 +69,13 @@
           <root url="file:///System/Library/Frameworks/OpenDirectory.framework/Frameworks/CFOpenDirectory.framework/Headers" />
           <root url="file:///System/Library/Frameworks/GLKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/PubSub.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/Hypervisor.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/vmnet.framework/Headers" />
           <root url="file:///System/Library/Frameworks/LDAP.framework/Headers" />
           <root url="file:///System/Library/Frameworks/GSS.framework/Headers" />
           <root url="file:///System/Library/Frameworks/PreferencePanes.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Tk.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Tk.framework/PrivateHeaders" />
-          <root url="file:///System/Library/Frameworks/vmnet.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/CryptoTokenKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/FinderSync.framework/Headers" />
           <root url="file:///System/Library/Frameworks/SyncServices.framework/Headers" />
           <root url="file:///System/Library/Frameworks/SecurityInterface.framework/Headers" />
@@ -103,7 +104,6 @@
           <root url="file:///System/Library/Frameworks/ServiceManagement.framework/Headers" />
           <root url="file:///System/Library/Frameworks/IOBluetoothUI.framework/Headers" />
           <root url="file:///System/Library/Frameworks/OpenCL.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/CryptoTokenKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/QTKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/IOSurface.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Python.framework/Headers" />
@@ -115,6 +115,7 @@
           <root url="file:///System/Library/Frameworks/CoreText.framework/Headers" />
           <root url="file:///System/Library/Frameworks/SpriteKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreData.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/Hypervisor.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreAudio.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Carbon.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Carbon.framework/Frameworks/HIToolbox.framework/Headers" />
@@ -132,8 +133,8 @@
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/PrintCore.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/LangAnalysis.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/QD.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/ImageIO.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/ColorSync.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreGraphics.framework/Headers" />
@@ -169,7 +170,6 @@
           <root url="file:///System/Library/Frameworks/OpenGL.framework/Headers" />
           <root url="file:///System/Library/Frameworks/DrawSprocket.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ScreenSaver.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/CoreBluetooth.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreLocation.framework/Headers" />
           <root url="file:///System/Library/Frameworks/IOKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Social.framework/Headers" />
@@ -177,6 +177,7 @@
           <root url="file:///System/Library/Frameworks/Accounts.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Cocoa.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreMedia.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/SceneKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/OSAKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CloudKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/NotificationCenter.framework/Headers" />
@@ -194,10 +195,10 @@
           <root url="file:///usr/include" />
           <root url="file:///usr/local/include" />
           <root url="file://$MODULE_DIR$/../sevengine/include" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo" />
           <root url="file://$USER_HOME$/Qt/5.7/clang_64/lib/QtDesignerComponents.framework/Headers" />
           <root url="file://$USER_HOME$/Qt/5.7/clang_64/lib/QtQuickParticles.framework/Headers" />
           <root url="file://$USER_HOME$/Qt/5.7/clang_64/lib/Qt3DCore.framework/Headers" />
@@ -304,7 +305,7 @@
           <root url="file:///System/Library/Frameworks/StoreKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Kerberos.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreGraphics.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/SceneKit.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/CoreBluetooth.framework/Headers" />
           <root url="file:///System/Library/Frameworks/EventKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/JavaFrameEmbedding.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ICADevices.framework/Headers" />
@@ -312,13 +313,13 @@
           <root url="file:///System/Library/Frameworks/OpenDirectory.framework/Frameworks/CFOpenDirectory.framework/Headers" />
           <root url="file:///System/Library/Frameworks/GLKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/PubSub.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/Hypervisor.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/vmnet.framework/Headers" />
           <root url="file:///System/Library/Frameworks/LDAP.framework/Headers" />
           <root url="file:///System/Library/Frameworks/GSS.framework/Headers" />
           <root url="file:///System/Library/Frameworks/PreferencePanes.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Tk.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Tk.framework/PrivateHeaders" />
-          <root url="file:///System/Library/Frameworks/vmnet.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/CryptoTokenKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/FinderSync.framework/Headers" />
           <root url="file:///System/Library/Frameworks/SyncServices.framework/Headers" />
           <root url="file:///System/Library/Frameworks/SecurityInterface.framework/Headers" />
@@ -347,7 +348,6 @@
           <root url="file:///System/Library/Frameworks/ServiceManagement.framework/Headers" />
           <root url="file:///System/Library/Frameworks/IOBluetoothUI.framework/Headers" />
           <root url="file:///System/Library/Frameworks/OpenCL.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/CryptoTokenKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/QTKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/IOSurface.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Python.framework/Headers" />
@@ -359,6 +359,7 @@
           <root url="file:///System/Library/Frameworks/CoreText.framework/Headers" />
           <root url="file:///System/Library/Frameworks/SpriteKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreData.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/Hypervisor.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreAudio.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Carbon.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Carbon.framework/Frameworks/HIToolbox.framework/Headers" />
@@ -376,8 +377,8 @@
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/PrintCore.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/LangAnalysis.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/QD.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/ImageIO.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/ColorSync.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreGraphics.framework/Headers" />
@@ -413,7 +414,6 @@
           <root url="file:///System/Library/Frameworks/OpenGL.framework/Headers" />
           <root url="file:///System/Library/Frameworks/DrawSprocket.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ScreenSaver.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/CoreBluetooth.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreLocation.framework/Headers" />
           <root url="file:///System/Library/Frameworks/IOKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Social.framework/Headers" />
@@ -421,6 +421,7 @@
           <root url="file:///System/Library/Frameworks/Accounts.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Cocoa.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreMedia.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/SceneKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/OSAKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CloudKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/NotificationCenter.framework/Headers" />
@@ -438,10 +439,10 @@
           <root url="file:///usr/include" />
           <root url="file:///usr/local/include" />
           <root url="file://$MODULE_DIR$/../sevengine/include" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo" />
           <root url="file://$USER_HOME$/Qt/5.7/clang_64/lib/QtDesignerComponents.framework/Headers" />
           <root url="file://$USER_HOME$/Qt/5.7/clang_64/lib/QtQuickParticles.framework/Headers" />
           <root url="file://$USER_HOME$/Qt/5.7/clang_64/lib/Qt3DCore.framework/Headers" />
@@ -520,10 +521,10 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.0/include" />
         </SOURCES>
         <excluded>
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release/sev-workshop_automoc.cpp" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug/sev-workshop_automoc.cpp" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel/sev-workshop_automoc.cpp" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.2/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo/sev-workshop_automoc.cpp" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release/sev-workshop_automoc.cpp" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug/sev-workshop_automoc.cpp" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel/sev-workshop_automoc.cpp" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo/sev-workshop_automoc.cpp" />
         </excluded>
       </library>
     </orderEntry>
