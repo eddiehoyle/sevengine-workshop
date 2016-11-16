@@ -7,5 +7,6 @@
 
 #include "01_triangle/Example.hh"
 #include "02_rect/Example.hh"
+#include "03_rectTextured/Example.hh"
 
 #endif //SEVENGINE_WORKSHOP_EXAMPLES_HH

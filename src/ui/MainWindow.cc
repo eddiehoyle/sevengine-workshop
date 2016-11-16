@@ -43,7 +43,9 @@ MainWindow::MainWindow()
 
     m_layout->addLayout( optionLayout );
 
-    setExperiment( kExampleTriangle );
+    setExperiment( kExampleRectTextured );
+    combo->setCurrentIndex( 2 );
+
 }
 
 void MainWindow::change( int index )
@@ -68,7 +70,7 @@ void MainWindow::setExperiment( ExampleType type )
             m_gl = new E02::Example();
             break;
         default:
-            m_gl = new QOpenGLWidget();
+            m_gl = new E03::Example();
     }
     m_gl->setFormat( QSurfaceFormat::defaultFormat() );
     m_layout->addWidget( m_gl );

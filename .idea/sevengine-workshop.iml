@@ -5,6 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/02_rect/Example.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/02_rect/Example.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/03_rectTextured/Example.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/03_rectTextured/Example.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/01_triangle/Example.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/01_triangle/Example.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/Examples.hh" isTestSource="false" />
