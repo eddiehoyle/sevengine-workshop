@@ -46,6 +46,8 @@ void Example::initializeGL() {
 
     m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
     m_shader->bindAttr( 0, "in_Position" );
+    m_shader->bindAttr( 1, "in_TextureUV" );
+    checkError();
 
     const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/cat.png";
     m_texture = new Texture( GL_TEXTURE_2D, path, 200, 200 );
@@ -95,29 +97,29 @@ void Example::paintGL()
 
     Vertex a, b, c, d;
     float size = 100;
-    float cx = width() / 2;
-    float cy = height() / 2;
-    a.set( cx - size, cy + size, 0.0, 0.0f );
-    b.set( cx - size, cy - size, 0.0, 1.0f );
-    c.set( cx + size, cy + size, 1.0, 0.0f );
-    d.set( cx + size, cy - size, 1.0, 1.0f );
+    float x = ( width() / 2 ) - ( size / 2 );
+    float y = ( height() / 2 ) - ( size / 2 );
+
+    Quad q = Quad( size, size );
+    q.setTranslate( glm::vec2( x, y ) );
+
     Vertex vertices[4] = {
-            a, b, c, d
+            q.bl, q.tl, q.tr, q.br
     };
 
     GLuint elements[6] = {
-            0, 1, 2, 2, 1, 3
+            0, 1, 2, 0, 2, 3
     };
 
     glBindBuffer( GL_ARRAY_BUFFER, vbo );
     glBufferData( GL_ARRAY_BUFFER, sizeof( vertices ) * sizeof( Vertex ), vertices, GL_STATIC_DRAW );
 
     GLuint stride = sizeof( Vertex );
-    glVertexAttribPointer( m_shader->getAttrHandle( "in_Position" ), 2, GL_FLOAT, GL_FALSE, stride, ( void * ) + 0 );
+    glVertexAttribPointer( m_shader->getAttrHandle( "in_Position" ), 4, GL_FLOAT, GL_FALSE, stride, ( void * ) + 0 );
     glEnableVertexAttribArray( m_shader->getAttrHandle( "in_Position" ) );
 
-    glVertexAttribPointer( m_shader->getAttrHandle( "in_TextureUV" ), 2, GL_FLOAT, GL_FALSE, stride, ( void * ) + 2 );
-    glEnableVertexAttribArray( m_shader->getAttrHandle( "in_TextureUV" ) );
+//    glVertexAttribPointer( m_shader->getAttrHandle( "in_Position" ), 2, GL_FLOAT, GL_FALSE, stride, ( void * ) + 2 );
+//    glEnableVertexAttribArray( m_shader->getAttrHandle( "in_Position" ) );
 
     glBindBuffer( GL_ELEMENT_ARRAY_BUFFER, ebo );
     glBufferData( GL_ELEMENT_ARRAY_BUFFER, sizeof( vertices ) * sizeof( GLuint ), elements, GL_STATIC_DRAW );
@@ -126,8 +128,12 @@ void Example::paintGL()
 //    glBindTexture( GL_TEXTURE_2D, m_shader->getUnifHandle( "uf_Texture" ) );
 //    glUniform1i( m_shader->getUnifHandle( "uf_Texture" ), 0 );
 
-    Texture::bind( m_texture );
-    glUniform1i( m_shader->getUnifHandle( "uf_Texture" ), 0 );
+    glActiveTexture( GL_TEXTURE0 );
+    glBindTexture( m_texture->getTarget(), m_texture->getHandle() );
+//    glUniform1i( m_shader->getUnifHandle( "uf_Texture" ), 0 );
+
+    glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
+    glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
 
 
 
