@@ -50,7 +50,7 @@ void Example::initializeGL() {
     const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/cat.png";
     m_texture = new Texture( GL_TEXTURE_2D, path, 256, 256 );
 
-    m_render = new RenderRect( m_shader, m_texture );
+    m_render = new RenderRect( m_shader );
 }
 
 void Example::paintGL()

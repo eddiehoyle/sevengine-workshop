@@ -1,7 +1,6 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include "_GLWidget.hh"
 #include <QOpenGLWidget>
 #include <QVBoxLayout>
 #include <QMainWindow>

@@ -10,7 +10,6 @@
 #include <QLabel>
 
 #include "MainWindow.hh"
-#include "_Window.hh"
 #include "../examples/Examples.hh"
 
 

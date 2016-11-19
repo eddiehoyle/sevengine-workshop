@@ -1,6 +1,6 @@
 // Attributes
-attribute vec4 in_Position;
-attribute vec4 in_TextureUV;
+attribute vec2 in_Position;
+attribute vec2 in_TextureUV;
 
 // Texture
 varying vec2 var_TextureUV;
@@ -11,8 +11,8 @@ uniform mat4 uf_Projection;
 void main()
 {
     // Texture UV coords
-    var_TextureUV = vec2( in_Position.zw );
+    var_TextureUV = in_TextureUV;
 
     // Vertex position
-    gl_Position = uf_Projection * vec4( in_Position.xy, 0.0, 1.0 );
+    gl_Position = uf_Projection * vec4( in_Position, 0.0, 1.0 );
 }

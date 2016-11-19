@@ -91,7 +91,10 @@ void Example::paintGL() {
 
     GLuint stride = sizeof( Vertex );
     glVertexAttribPointer( m_shader->getAttrHandle( "in_Position" ), 2, GL_FLOAT, GL_FALSE, stride, ( void * ) + 0 );
+    glVertexAttribPointer( m_shader->getAttrHandle( "in_TextureUV" ), 2, GL_FLOAT, GL_FALSE, stride, ( void * ) + 2 );
+
     glEnableVertexAttribArray( m_shader->getAttrHandle( "in_Position" ) );
+    glEnableVertexAttribArray( m_shader->getAttrHandle( "in_TextureUV" ) );
 
     glBindBuffer( GL_ELEMENT_ARRAY_BUFFER, ebo );
     glBufferData( GL_ELEMENT_ARRAY_BUFFER, 3 * sizeof( GLuint ), elements, GL_STATIC_DRAW );
