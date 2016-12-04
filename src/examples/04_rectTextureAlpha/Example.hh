@@ -2,11 +2,8 @@
 // Created by Eddie Hoyle on 13/11/16.
 //
 
-#ifndef SEVENGINE_WORKSHOP_03_EXAMPLE_HH
-#define SEVENGINE_WORKSHOP_03_EXAMPLE_HH
-
-//#include "../AbstractExample.hh"
-
+#ifndef SEVENGINE_WORKSHOP_04_EXAMPLE_HH
+#define SEVENGINE_WORKSHOP_04_EXAMPLE_HH
 
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions>
@@ -18,13 +15,13 @@
 #include <sev/graphics/Texture.hh>
 #include <sev/graphics/render/RenderRect.hh>
 
-
-namespace E03 {
+namespace E04 {
 
 class Example
         : public QOpenGLWidget,
           protected QOpenGLFunctions
 {
+    Q_OBJECT
 
 public:
     explicit Example( QWidget* parent = NULL );
@@ -36,6 +33,7 @@ public:
 
 public slots:
     void cleanup();
+    void animate();
 
 private:
     Shader* m_shader;
@@ -47,4 +45,4 @@ private:
 
 }
 
-#endif //SEVENGINE_WORKSHOP_EXAMPLE_HH
+#endif //SEVENGINE_WORKSHOP_04_EXAMPLE_HH

@@ -10,7 +10,10 @@
 enum ExampleType {
     kExampleTriangle     = 0,
     kExampleRect         = 1,
-    kExampleRectTextured = 2,
+    kExampleRectTexture = 2,
+    kExampleRectTextureAlpha = 3,
+    kExampleText = 4,
+
 };
 
 //class Window : public QMainWindow

@@ -71,15 +71,16 @@ void Example::paintGL() {
     glGenBuffers( 1, &vbo );
     glGenBuffers( 1, &ebo );
 
-    Vertex a, b, c;
+    Vertex v1, v2, v3;
+    GLubyte r, g, b, a;
     float size = 100;
     float cx = width() / 2;
     float cy = height() / 2;
-    a.set( cx - size, cy - size, 0.0, 0.0f );
-    b.set( cx, cy + size, 0.0, 0.0f );
-    c.set( cx + size, cy - size, 0.0, 0.0f );
+    v1.set( cx - size, cy - size, 0.0, 0.0f, r, g, b, a );
+    v2.set( cx, cy + size, 0.0, 0.0f, r, g, b, a );
+    v3.set( cx + size, cy - size, 0.0, 0.0f, r, g, b, a );
     Vertex vertices[3] = {
-            a, b, c
+            v1, v2, v3
     };
 
     GLuint elements[3] = {

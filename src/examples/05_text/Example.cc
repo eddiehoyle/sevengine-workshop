@@ -11,20 +11,33 @@
 #include <sev/Utilities.hh>
 #include <sev/core/Transform.hh>
 
-#include <glm/gtx/matrix_decompose.hpp>
-#include <glm/glm.hpp>
+#include <QTimer>
 
-namespace E03 {
+#include <glm/glm.hpp>
+#include <glm/ext.hpp>
+
+#include <ft2build.h>
+#include FT_FREETYPE_H
+#include FT_TYPES_H
+
+namespace E05 {
 
 Example::Example(QWidget *parent)
         : QOpenGLWidget( parent )
 {
-    // TODO
+//    QTimer* aTimer = new QTimer;
+//    connect( aTimer, SIGNAL( timeout() ), this, SLOT( animate() ) );
+//    aTimer->start(30);
 }
 
 Example::~Example()
 {
     cleanup();
+}
+
+void Example::animate()
+{
+    update();
 }
 
 void Example::resizeGL( int width, int height )
@@ -35,6 +48,36 @@ void Example::resizeGL( int width, int height )
 void Example::initializeGL() {
 
     connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &Example::cleanup );
+
+    FT_Library library;
+    FT_Face face;
+
+    int error;
+
+    error = FT_Init_FreeType( &library );
+    if ( error ) {
+        std::cerr << "Failed to init freetype: " << error << std::endl;
+    } else {
+        std::cerr << "FT init successful" << std::endl;
+    }
+
+    error = FT_New_Face( library,
+                         "/Library/Fonts/Arial.ttf",
+                         0,
+                         &face );
+    if ( error == FT_Err_Unknown_File_Format )
+    {
+        std::cerr << "Error loading face: FT_Err_Unknown_File_Format" << std::endl;
+    }
+    else if ( error )
+    {
+        std::cerr << "Error loading face: " << error << std::endl;
+    } else {
+        std::cerr << "FT face init successful" << std::endl;
+
+    }
+
+    // ----------------------------------------------------------------------------------------
 
     initializeOpenGLFunctions();
 
@@ -48,9 +91,9 @@ void Example::initializeGL() {
 
     m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
 
-    const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/cats.png";
+    const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/bomb.png";
     m_texture = new Texture2D( path );
-    m_texture->setResizeMode( GL_LINEAR, GL_LINEAR );
+    m_texture->setResizeMode( GL_NEAREST, GL_NEAREST );
     m_texture->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
     m_render = new RenderRect( m_shader );
@@ -65,48 +108,16 @@ void Example::paintGL()
     m_shader->setUnif( "uf_Projection", false, projection );
 
     int size = 100;
-
-    Transform transformA( glm::vec2( 0.0f, 0.0f ), 45.0f, glm::vec2( 1.0f, 1.0f ) );
-    transformA.setPivot( glm::vec2( size / 2, size / 2 ) );
-    Transform transformB = transformA;
-    Transform transformC = transformA;
-    Transform transformD = transformA;
-
-    transformA.setPosition( 90.0f, 170.0f );
-    transformA.setAngle( -15.0f );
-
-    transformB.setPosition( 120.0, 80.0 );
-    transformB.setAngle( 10.0f );
-
-    transformC.setPosition( 190.0, 180.0 );
-    transformC.setAngle( 20.0f );
-
-    transformD.setPosition( 210.0, 80.0 );
-    transformD.setAngle( 20.0f );
+    Transform transform( glm::vec2( 0.0f, 0.0f ), 0.0f, glm::vec2( 1.0f, 1.0f ) );
+    transform.setPivot( glm::vec2( size / 2, size / 2 ) );
 
     Quad a( size, size );
-    a.setUV( 0.0, 0.5, 0.0, 0.5 );
-    a.setMatrix( transformA.getMatrix() );
-
-    Quad b( size, size );
-    b.setUV( 0.5, 1.0, 0.5, 1.0 );
-    b.setMatrix( transformB.getMatrix() );
-
-    Quad c( size, size );
-    c.setUV( 0.5, 1.0, 0.0, 0.5 );
-    c.setMatrix( transformC.getMatrix() );
-
-    Quad d( size, size );
-    d.setUV( 0.0, 0.5, 0.5, 1.0 );
-    d.setMatrix( transformD.getMatrix() );
+    a.setUV( 0.0, 1.0, 0.0, 1.0 );
+    a.setMatrix( transform.getMatrix() );
 
     Texture2D::bind( m_texture, GL_TEXTURE0 );
 
     m_render->buffer( a );
-    m_render->buffer( b );
-    m_render->buffer( c );
-    m_render->buffer( d );
-
     m_render->allocate();
     m_render->draw();
     m_render->release();

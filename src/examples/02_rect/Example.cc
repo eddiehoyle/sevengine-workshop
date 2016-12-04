@@ -9,7 +9,8 @@
 #include <iostream>
 
 #include <sev/Utilities.hh>
-//#include "../../Util.hh"
+#include <sev/core/Transform.hh>
+
 
 namespace E02 {
 
@@ -47,9 +48,6 @@ void Example::initializeGL() {
     m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
     m_shader->bindAttr( 0, "in_Position" );
 
-    const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/cat.png";
-    m_texture = new Texture( GL_TEXTURE_2D, path, 256, 256 );
-
     m_render = new RenderRect( m_shader );
 }
 
@@ -71,8 +69,12 @@ void Example::paintGL()
     int offsetX = ( width() / 2 ) - ( size / 2 );
     int offsetY = ( height() / 2 )- ( size / 2 );
 
+    Transform transform( glm::vec2( 0.0f, 0.0f ), 0.0f, glm::vec2( 1.0f, 1.0f ) );
+    transform.setPivot( glm::vec2( size / 2, size / 2 ) );
+    transform.setPosition( offsetX, offsetY );
+
     Quad a( size, size );
-    a.setTranslate( glm::vec2( offsetX, offsetY ) );
+    a.setMatrix( transform.getMatrix() );
 
     m_render->buffer( a );
     m_render->draw();

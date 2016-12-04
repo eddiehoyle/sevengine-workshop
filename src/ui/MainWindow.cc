@@ -29,7 +29,10 @@ MainWindow::MainWindow()
     QStringList items;
     items << "Triangle";
     items << "Rect";
-    items << "Textured Rect";
+    items << "Texture Rect";
+    items << "Texture Alpha Rect";
+    items << "Text";
+
     combo->addItems( items );
 
     connect( combo, SIGNAL( currentIndexChanged( int ) ),
@@ -42,9 +45,8 @@ MainWindow::MainWindow()
 
     m_layout->addLayout( optionLayout );
 
-    setExperiment( kExampleRectTextured );
-    combo->setCurrentIndex( 2 );
-
+    setExperiment( kExampleRectTextureAlpha );
+    combo->setCurrentIndex( 3 );
 }
 
 void MainWindow::change( int index )
@@ -68,8 +70,18 @@ void MainWindow::setExperiment( ExampleType type )
         case kExampleRect:
             m_gl = new E02::Example();
             break;
-        default:
+        case kExampleRectTexture:
             m_gl = new E03::Example();
+            break;
+        case kExampleRectTextureAlpha:
+            m_gl = new E04::Example();
+            break;
+        case kExampleText:
+            m_gl = new E05::Example();
+            break;
+        default:
+            m_gl = new E01::Example();
+            break;
     }
     m_gl->setFormat( QSurfaceFormat::defaultFormat() );
     m_layout->addWidget( m_gl );
