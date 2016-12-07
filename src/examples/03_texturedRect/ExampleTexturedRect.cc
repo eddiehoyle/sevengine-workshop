@@ -2,7 +2,7 @@
 // Created by Eddie Hoyle on 13/11/16.
 //
 
-#include "Example.hh"
+#include "ExampleTexturedRect.hh"
 
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
@@ -14,27 +14,36 @@
 #include <glm/gtx/matrix_decompose.hpp>
 #include <glm/glm.hpp>
 
+#include <QTimer>
+
 namespace E03 {
 
-Example::Example(QWidget *parent)
+ExampleTexturedRect::ExampleTexturedRect(QWidget *parent)
         : QOpenGLWidget( parent )
 {
-    // TODO
+    QTimer* aTimer = new QTimer;
+    connect( aTimer, SIGNAL( timeout() ), this, SLOT( animate() ) );
+    aTimer->start(30);
 }
 
-Example::~Example()
+ExampleTexturedRect::~ExampleTexturedRect()
 {
     cleanup();
 }
 
-void Example::resizeGL( int width, int height )
+void ExampleTexturedRect::animate()
+{
+    /// TODO
+}
+
+void ExampleTexturedRect::resizeGL( int width, int height )
 {
     // TODO
 }
 
-void Example::initializeGL() {
+void ExampleTexturedRect::initializeGL() {
 
-    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &Example::cleanup );
+    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &ExampleTexturedRect::cleanup );
 
     initializeOpenGLFunctions();
 
@@ -56,7 +65,7 @@ void Example::initializeGL() {
     m_render = new RenderRect( m_shader );
 }
 
-void Example::paintGL()
+void ExampleTexturedRect::paintGL()
 {
     m_shader->use();
 
@@ -72,17 +81,23 @@ void Example::paintGL()
     Transform transformC = transformA;
     Transform transformD = transformA;
 
-    transformA.setPosition( 90.0f, 170.0f );
+    float offsetX =  width() / 2;
+    float offsetY =  height() / 2;
+    transformA.setPosition( offsetX - ( size / 2 ),
+                            offsetY - ( size / 2 ) );
     transformA.setAngle( -15.0f );
 
-    transformB.setPosition( 120.0, 80.0 );
+    transformB.setPosition( offsetX - ( size / 2 ),
+                            offsetY + ( size / 2 ) );
     transformB.setAngle( 10.0f );
 
-    transformC.setPosition( 190.0, 180.0 );
+    transformC.setPosition( offsetX + ( size / 2 ),
+                            offsetY - ( size / 2 ) );
     transformC.setAngle( 20.0f );
 
-    transformD.setPosition( 210.0, 80.0 );
-    transformD.setAngle( 20.0f );
+    transformD.setPosition( offsetX + ( size / 2 ),
+                            offsetY + ( size / 2 ) );
+    transformD.setAngle( -20.0f );
 
     Quad a( size, size );
     a.setUV( 0.0, 0.5, 0.0, 0.5 );
@@ -114,7 +129,7 @@ void Example::paintGL()
     Texture2D::release( m_texture );
 }
 
-void Example::cleanup()
+void ExampleTexturedRect::cleanup()
 {
     // TODO
 }

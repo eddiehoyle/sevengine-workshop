@@ -2,7 +2,7 @@
 // Created by Eddie Hoyle on 13/11/16.
 //
 
-#include "Example.hh"
+#include "ExampleAnimatedTexturedRect.hh"
 
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
@@ -16,68 +16,50 @@
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 
-#include <ft2build.h>
-#include FT_FREETYPE_H
-#include FT_TYPES_H
+#include <QTimer>
 
-namespace E05 {
+namespace E04 {
 
-Example::Example(QWidget *parent)
+static float angle = 0.0f;
+static float translateY = 0.0f;
+static glm::vec2 position = glm::vec2( 0.0f, 0.0f );
+static float scale = 1.0f;
+
+ExampleAnimatedTexturedRect::ExampleAnimatedTexturedRect(QWidget *parent)
         : QOpenGLWidget( parent )
 {
-//    QTimer* aTimer = new QTimer;
-//    connect( aTimer, SIGNAL( timeout() ), this, SLOT( animate() ) );
-//    aTimer->start(30);
+    QTimer* aTimer = new QTimer;
+    connect( aTimer, SIGNAL( timeout() ), this, SLOT( animate() ) );
+    aTimer->start(30);
 }
 
-Example::~Example()
+ExampleAnimatedTexturedRect::~ExampleAnimatedTexturedRect()
 {
     cleanup();
 }
 
-void Example::animate()
+void ExampleAnimatedTexturedRect::animate()
 {
+    // Rotate
+    angle += 3.0f;
+
+    // Position
+    position.y = std::sin( translateY += 0.1f ) * 20;
+    position.y += 50.0f;
+    position.x = ( float )( width() / 2 ) - 50;
+
+    // Schedule paint
     update();
 }
 
-void Example::resizeGL( int width, int height )
+void ExampleAnimatedTexturedRect::resizeGL( int width, int height )
 {
     // TODO
 }
 
-void Example::initializeGL() {
+void ExampleAnimatedTexturedRect::initializeGL() {
 
-    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &Example::cleanup );
-
-    FT_Library library;
-    FT_Face face;
-
-    int error;
-
-    error = FT_Init_FreeType( &library );
-    if ( error ) {
-        std::cerr << "Failed to init freetype: " << error << std::endl;
-    } else {
-        std::cerr << "FT init successful" << std::endl;
-    }
-
-    error = FT_New_Face( library,
-                         "/Library/Fonts/Arial.ttf",
-                         0,
-                         &face );
-    if ( error == FT_Err_Unknown_File_Format )
-    {
-        std::cerr << "Error loading face: FT_Err_Unknown_File_Format" << std::endl;
-    }
-    else if ( error )
-    {
-        std::cerr << "Error loading face: " << error << std::endl;
-    } else {
-        std::cerr << "FT face init successful" << std::endl;
-
-    }
-
-    // ----------------------------------------------------------------------------------------
+    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &ExampleAnimatedTexturedRect::cleanup );
 
     initializeOpenGLFunctions();
 
@@ -99,7 +81,7 @@ void Example::initializeGL() {
     m_render = new RenderRect( m_shader );
 }
 
-void Example::paintGL()
+void ExampleAnimatedTexturedRect::paintGL()
 {
     m_shader->use();
 
@@ -110,6 +92,10 @@ void Example::paintGL()
     int size = 100;
     Transform transform( glm::vec2( 0.0f, 0.0f ), 0.0f, glm::vec2( 1.0f, 1.0f ) );
     transform.setPivot( glm::vec2( size / 2, size / 2 ) );
+
+    transform.setAngle( angle );
+    transform.setPosition( position );
+    transform.setScale( scale, scale );
 
     Quad a( size, size );
     a.setUV( 0.0, 1.0, 0.0, 1.0 );
@@ -125,7 +111,7 @@ void Example::paintGL()
     Texture2D::release( m_texture );
 }
 
-void Example::cleanup()
+void ExampleAnimatedTexturedRect::cleanup()
 {
     // TODO
 }

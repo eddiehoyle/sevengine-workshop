@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     MainWindow mw;
     mw.show();
-    mw.resize( QSize( 400, 180 ) );
+    mw.resize( QSize( 400, 380 ) );
 
 
 

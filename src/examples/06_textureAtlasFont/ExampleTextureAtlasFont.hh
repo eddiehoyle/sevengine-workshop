@@ -2,8 +2,8 @@
 // Created by Eddie Hoyle on 13/11/16.
 //
 
-#ifndef SEVENGINE_WORKSHOP_04_EXAMPLE_HH
-#define SEVENGINE_WORKSHOP_04_EXAMPLE_HH
+#ifndef SEVENGINE_WORKSHOP_06_EXAMPLE_HH
+#define SEVENGINE_WORKSHOP_06_EXAMPLE_HH
 
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions>
@@ -15,17 +15,27 @@
 #include <sev/graphics/Texture.hh>
 #include <sev/graphics/render/RenderRect.hh>
 
-namespace E04 {
+namespace E06 {
 
-class Example
+class ExampleTextureAtlasFont
         : public QOpenGLWidget,
           protected QOpenGLFunctions
 {
     Q_OBJECT
 
 public:
-    explicit Example( QWidget* parent = NULL );
-    ~Example();
+    struct Character {
+        GLuint     TextureID;  // ID handle of the glyph texture
+        glm::ivec2 Size;       // Size of glyph
+        glm::ivec2 Bearing;    // Offset from baseline to left/top of glyph
+        GLuint     Advance;    // Offset to advance to next glyph
+    };
+
+    std::map<GLchar, Character> Characters;
+
+public:
+    explicit ExampleTextureAtlasFont( QWidget* parent = NULL );
+    ~ExampleTextureAtlasFont();
 
     void initializeGL() Q_DECL_OVERRIDE;
     void resizeGL( int width, int height ) Q_DECL_OVERRIDE;
@@ -38,11 +48,10 @@ public slots:
 private:
     Shader* m_shader;
     Texture2D* m_texture;
-    Texture2D* m_texture2;
     RenderRect* m_render;
 
 };
 
 }
 
-#endif //SEVENGINE_WORKSHOP_04_EXAMPLE_HH
+#endif //SEVENGINE_WORKSHOP_06_EXAMPLE_HH

@@ -2,8 +2,8 @@
 // Created by Eddie Hoyle on 13/11/16.
 //
 
-#ifndef SEVENGINE_WORKSHOP_02_EXAMPLE_HH
-#define SEVENGINE_WORKSHOP_02_EXAMPLE_HH
+#ifndef SEVENGINE_WORKSHOP_03_EXAMPLE_HH
+#define SEVENGINE_WORKSHOP_03_EXAMPLE_HH
 
 //#include "../AbstractExample.hh"
 
@@ -18,21 +18,18 @@
 #include <sev/graphics/Texture.hh>
 #include <sev/graphics/render/RenderRect.hh>
 
-//namespace E02 {
-//    class Example;
-//}
 
-namespace E02 {
+namespace E03 {
 
-
-class Example
+class ExampleTexturedRect
         : public QOpenGLWidget,
           protected QOpenGLFunctions
 {
+    Q_OBJECT
 
 public:
-    explicit Example( QWidget* parent = NULL );
-    ~Example();
+    explicit ExampleTexturedRect( QWidget* parent = NULL );
+    ~ExampleTexturedRect();
 
     void initializeGL() Q_DECL_OVERRIDE;
     void resizeGL( int width, int height ) Q_DECL_OVERRIDE;
@@ -40,10 +37,12 @@ public:
 
 public slots:
     void cleanup();
+    void animate();
 
 private:
     Shader* m_shader;
-    Texture* m_texture;
+    Texture2D* m_texture;
+    Texture2D* m_texture2;
     RenderRect* m_render;
 
 };

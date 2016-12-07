@@ -3,16 +3,16 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/03_rectTextured/Example.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/03_rectTextured/Example.hh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/05_text/Example.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/05_text/Example.hh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/01_triangle/Example.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/01_triangle/Example.hh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/02_rect/Example.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/02_rect/Example.hh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/04_rectTextureAlpha/Example.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/04_rectTextureAlpha/Example.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/05_freeTypeFont/ExampleFreeTypeFont.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/05_freeTypeFont/ExampleFreeTypeFont.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/01_triangle/ExampleTriangle.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/01_triangle/ExampleTriangle.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/02_rect/ExampleRect.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/02_rect/ExampleRect.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/Examples.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/ui/MainWindow.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/ui/MainWindow.hh" isTestSource="false" />

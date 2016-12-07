@@ -2,7 +2,7 @@
 // Created by Eddie Hoyle on 13/11/16.
 //
 
-#include "Example.hh"
+#include "ExampleRect.hh"
 
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
@@ -11,28 +11,36 @@
 #include <sev/Utilities.hh>
 #include <sev/core/Transform.hh>
 
+#include <QTimer>
 
 namespace E02 {
 
-Example::Example(QWidget *parent)
+ExampleRect::ExampleRect(QWidget *parent)
         : QOpenGLWidget( parent )
 {
-    // TODO
+    QTimer* aTimer = new QTimer;
+    connect( aTimer, SIGNAL( timeout() ), this, SLOT( animate() ) );
+    aTimer->start(30);
 }
 
-Example::~Example()
+ExampleRect::~ExampleRect()
 {
     cleanup();
 }
 
-void Example::resizeGL( int width, int height )
+void ExampleRect::animate()
+{
+    /// TODO
+}
+
+void ExampleRect::resizeGL( int width, int height )
 {
     // TODO
 }
 
-void Example::initializeGL() {
+void ExampleRect::initializeGL() {
 
-    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &Example::cleanup );
+    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &ExampleRect::cleanup );
 
     initializeOpenGLFunctions();
 //    printContextInformation( context(), format() );
@@ -51,9 +59,9 @@ void Example::initializeGL() {
     m_render = new RenderRect( m_shader );
 }
 
-void Example::paintGL()
+void ExampleRect::paintGL()
 {
-    qDebug( "E02::Example::paintGL()" );
+    qDebug( "E02::ExampleTriangle::paintGL()" );
 
     m_shader->use();
 
@@ -81,7 +89,7 @@ void Example::paintGL()
 
 }
 
-void Example::cleanup()
+void ExampleRect::cleanup()
 {
     // TODO
 }

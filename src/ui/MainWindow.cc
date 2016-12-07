@@ -22,7 +22,7 @@ MainWindow::MainWindow()
     m_layout = new QVBoxLayout( widget );
     setCentralWidget( widget );
 
-    QLabel* label = new QLabel( "Example:");
+    QLabel* label = new QLabel( "ExampleTriangle:");
     QComboBox* combo = new QComboBox();
     combo->setFixedWidth( 140 );
 
@@ -65,22 +65,22 @@ void MainWindow::setExperiment( ExampleType type )
     switch( type )
     {
         case kExampleTriangle:
-            m_gl = new E01::Example();
+            m_gl = new E01::ExampleTriangle();
             break;
         case kExampleRect:
-            m_gl = new E02::Example();
+            m_gl = new E02::ExampleRect();
             break;
         case kExampleRectTexture:
-            m_gl = new E03::Example();
+            m_gl = new E03::ExampleTexturedRect();
             break;
         case kExampleRectTextureAlpha:
-            m_gl = new E04::Example();
+            m_gl = new E04::ExampleAnimatedTexturedRect();
             break;
         case kExampleText:
-            m_gl = new E05::Example();
+            m_gl = new E05::ExampleFreeTypeFont();
             break;
         default:
-            m_gl = new E01::Example();
+            m_gl = new E01::ExampleTriangle();
             break;
     }
     m_gl->setFormat( QSurfaceFormat::defaultFormat() );

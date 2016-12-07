@@ -2,7 +2,7 @@
 // Created by Eddie Hoyle on 13/11/16.
 //
 
-#include "Example.hh"
+#include "ExampleTriangle.hh"
 
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
@@ -15,28 +15,37 @@
 
 #include "../../Util.hh"
 
+#include <QTimer>
+
 namespace E01 {
 
-Example::Example(QWidget *parent)
+ExampleTriangle::ExampleTriangle(QWidget *parent)
         : QOpenGLWidget( parent )
 {
-    // TODO
+    QTimer* aTimer = new QTimer;
+    connect( aTimer, SIGNAL( timeout() ), this, SLOT( animate() ) );
+    aTimer->start(30);
 }
 
-Example::~Example()
+ExampleTriangle::~ExampleTriangle()
 {
     cleanup();
 }
 
-void Example::resizeGL( int width, int height )
+void ExampleTriangle::animate()
+{
+    /// TODO
+}
+
+void ExampleTriangle::resizeGL( int width, int height )
 {
     // TODO
 }
 
-void Example::initializeGL()
+void ExampleTriangle::initializeGL()
 {
-    qDebug( "E01::Example::initializeGL()" );
-    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &Example::cleanup );
+    qDebug( "E01::ExampleTriangle::initializeGL()" );
+    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &ExampleTriangle::cleanup );
 
     initializeOpenGLFunctions();
     printContextInformation( context(), format() );
@@ -53,9 +62,9 @@ void Example::initializeGL()
     m_shader->bindAttr( 0, "in_Position" );
 }
 
-void Example::paintGL() {
+void ExampleTriangle::paintGL() {
 
-    qDebug( "E01::Example::paintGL()" );
+    qDebug( "E01::ExampleTriangle::paintGL()" );
 
     m_shader->use();
 
@@ -108,7 +117,7 @@ void Example::paintGL() {
     glDeleteBuffers( 1, &ebo );
 }
 
-void Example::cleanup()
+void ExampleTriangle::cleanup()
 {
     // TODO
 }

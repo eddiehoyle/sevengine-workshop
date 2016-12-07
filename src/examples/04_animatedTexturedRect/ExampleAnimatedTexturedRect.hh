@@ -2,8 +2,8 @@
 // Created by Eddie Hoyle on 13/11/16.
 //
 
-#ifndef SEVENGINE_WORKSHOP_01_EXAMPLE_HH
-#define SEVENGINE_WORKSHOP_01_EXAMPLE_HH
+#ifndef SEVENGINE_WORKSHOP_04_EXAMPLE_HH
+#define SEVENGINE_WORKSHOP_04_EXAMPLE_HH
 
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions>
@@ -12,21 +12,20 @@
 #include <GLES2/gl2.h>
 
 #include <sev/core/Shader.hh>
+#include <sev/graphics/Texture.hh>
+#include <sev/graphics/render/RenderRect.hh>
 
-//namespace E01 {
-//    class Example;
-//}
+namespace E04 {
 
-namespace E01 {
-
-class Example
+class ExampleAnimatedTexturedRect
         : public QOpenGLWidget,
           protected QOpenGLFunctions
 {
+    Q_OBJECT
 
 public:
-    explicit Example( QWidget* parent = NULL );
-    ~Example();
+    explicit ExampleAnimatedTexturedRect( QWidget* parent = NULL );
+    ~ExampleAnimatedTexturedRect();
 
     void initializeGL() Q_DECL_OVERRIDE;
     void resizeGL( int width, int height ) Q_DECL_OVERRIDE;
@@ -34,13 +33,15 @@ public:
 
 public slots:
     void cleanup();
+    void animate();
 
 private:
     Shader* m_shader;
+    Texture2D* m_texture;
+    RenderRect* m_render;
 
 };
 
 }
 
-
-#endif //SEVENGINE_WORKSHOP_01_EXAMPLE_HH
+#endif //SEVENGINE_WORKSHOP_04_EXAMPLE_HH

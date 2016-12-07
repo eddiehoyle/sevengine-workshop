@@ -5,10 +5,10 @@
 #ifndef SEVENGINE_WORKSHOP_EXAMPLES_HH
 #define SEVENGINE_WORKSHOP_EXAMPLES_HH
 
-#include "01_triangle/Example.hh"
-#include "02_rect/Example.hh"
-#include "03_rectTextured/Example.hh"
-#include "04_rectTextureAlpha/Example.hh"
-#include "05_text/Example.hh"
+#include "src/examples/01_triangle/ExampleTriangle.hh"
+#include "src/examples/02_rect/ExampleRect.hh"
+#include "src/examples/03_texturedRect/ExampleTexturedRect.hh"
+#include "src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh"
+#include "src/examples/05_freeTypeFont/ExampleFreeTypeFont.hh"
 
 #endif //SEVENGINE_WORKSHOP_EXAMPLES_HH
