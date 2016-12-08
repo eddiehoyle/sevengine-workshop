@@ -15,25 +15,7 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdda0d6d-0cf9-4759-ab3f-a07e467dc181" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/examples/05_freeTypeFont/ExampleFreeTypeFont.cc" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/05_text/Example.cc" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/01_triangle/Example.cc" afterPath="$PROJECT_DIR$/src/examples/01_triangle/ExampleTriangle.cc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/01_triangle/Example.hh" afterPath="$PROJECT_DIR$/src/examples/01_triangle/ExampleTriangle.hh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/02_rect/Example.cc" afterPath="$PROJECT_DIR$/src/examples/02_rect/ExampleRect.cc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/02_rect/Example.hh" afterPath="$PROJECT_DIR$/src/examples/02_rect/ExampleRect.hh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/03_rectTextured/Example.cc" afterPath="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/03_rectTextured/Example.hh" afterPath="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.hh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/04_rectTextureAlpha/Example.cc" afterPath="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/04_rectTextureAlpha/Example.hh" afterPath="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/05_text/Example.hh" afterPath="$PROJECT_DIR$/src/examples/05_freeTypeFont/ExampleFreeTypeFont.hh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sevengine-workshop.iml" afterPath="$PROJECT_DIR$/.idea/sevengine-workshop.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/texture.frag" afterPath="$PROJECT_DIR$/resources/texture.frag" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/Examples.hh" afterPath="$PROJECT_DIR$/src/examples/Examples.hh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cc" afterPath="$PROJECT_DIR$/src/main.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/MainWindow.cc" afterPath="$PROJECT_DIR$/src/ui/MainWindow.cc" />
-    </list>
+    <list default="true" id="fdda0d6d-0cf9-4759-ab3f-a07e467dc181" name="Default" comment="" />
     <ignored path="sevengine-workshop.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +35,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExampleTextureAtlasFont.cc" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExampleTextureAtlasFont.cc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="474">
@@ -63,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="87">
@@ -135,8 +117,9 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="640" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="640" />
     <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -563,10 +546,10 @@
     <option name="totallyTimeSpent" value="25144000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
+    <frame x="640" y="23" width="640" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25019857" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5088853" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2804699" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -936,7 +919,7 @@
         <state relative-caret-position="270">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="37" selection-end-column="1" />
           <folding>
-            <element signature="e#105#127#0" expanded="true" />
+            <element signature="e#105#127#0" expanded="false" />
             <marker date="1481100755000" expanded="true" signature="324:3325" ph="{...}" />
             <marker date="1481100755000" expanded="true" signature="411:539" ph="{...}" />
             <marker date="1481100755000" expanded="true" signature="577:595" ph="{...}" />
@@ -982,7 +965,7 @@
         <state relative-caret-position="135">
           <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding>
-            <element signature="e#117#139#0" expanded="true" />
+            <element signature="e#117#139#0" expanded="false" />
             <marker date="1481100681000" expanded="true" signature="322:2971" ph="{...}" />
           </folding>
         </state>
@@ -1030,7 +1013,7 @@
         <state relative-caret-position="289">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="33" selection-end-column="1" />
           <folding>
-            <element signature="e#101#123#0" expanded="true" />
+            <element signature="e#101#123#0" expanded="false" />
             <marker date="1481100766000" expanded="true" signature="240:2290" ph="{...}" />
             <marker date="1481100766000" expanded="true" signature="319:447" ph="{...}" />
             <marker date="1481100766000" expanded="true" signature="477:495" ph="{...}" />
@@ -1056,18 +1039,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="49" column="99" selection-start-line="49" selection-start-column="99" selection-end-line="49" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="49" column="99" selection-start-line="49" selection-start-column="99" selection-end-line="49" selection-end-column="99" />
           <folding />
         </state>
       </provider>
