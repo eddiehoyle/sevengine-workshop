@@ -13,6 +13,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/02_rect/ExampleRect.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/02_rect/ExampleRect.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/Examples.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/ui/MainWindow.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/ui/MainWindow.hh" isTestSource="false" />
@@ -197,9 +199,9 @@
           <root url="file:///usr/include" />
           <root url="file:///usr/local/include" />
           <root url="file://$MODULE_DIR$/../sevengine/include" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug" />
           <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release" />
           <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo" />
           <root url="file://$USER_HOME$/Qt/5.7/clang_64/lib/QtDesignerComponents.framework/Headers" />
           <root url="file://$USER_HOME$/Qt/5.7/clang_64/lib/QtQuickParticles.framework/Headers" />
@@ -441,9 +443,9 @@
           <root url="file:///usr/include" />
           <root url="file:///usr/local/include" />
           <root url="file://$MODULE_DIR$/../sevengine/include" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug" />
           <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release" />
           <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo" />
           <root url="file://$USER_HOME$/Qt/5.7/clang_64/lib/QtDesignerComponents.framework/Headers" />
           <root url="file://$USER_HOME$/Qt/5.7/clang_64/lib/QtQuickParticles.framework/Headers" />
@@ -523,9 +525,9 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.0/include" />
         </SOURCES>
         <excluded>
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release/sev-workshop_automoc.cpp" />
-          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug/sev-workshop_automoc.cpp" />
           <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/MinSizeRel/sev-workshop_automoc.cpp" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Debug/sev-workshop_automoc.cpp" />
+          <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/Release/sev-workshop_automoc.cpp" />
           <root url="file://$USER_HOME$/Library/Caches/CLion2016.1/cmake/generated/sevengine-workshop-518df0ac/518df0ac/RelWithDebInfo/sev-workshop_automoc.cpp" />
         </excluded>
       </library>

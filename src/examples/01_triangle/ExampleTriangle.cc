@@ -10,7 +10,6 @@
 #include <glm/glm.hpp>
 
 #include <sev/Utilities.hh>
-#include <sev/core/Shader.hh>
 #include <sev/graphics/Vertex.hh>
 
 #include "../../Util.hh"
@@ -58,23 +57,23 @@ void ExampleTriangle::initializeGL()
     const char* vertexShaderStr = readShaderFile( vertexPath );
     const char* fragmentShaderStr = readShaderFile( fragmentPath );
 
-    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
-    m_shader->bindAttr( 0, "in_Position" );
+//    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
+//    m_shader->bindAttr( 0, "in_Position" );
 }
 
 void ExampleTriangle::paintGL() {
 
     qDebug( "E01::ExampleTriangle::paintGL()" );
 
-    m_shader->use();
-
-    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
-                                       0.0f, ( float )height(),
-                                       -1.0f, 1.0f );
-    m_shader->setUnif( "uf_Projection", false, projection );
-
-    glm::vec4 rgba = glm::vec4( 0.4, 0.2, 0.2, 1.0 );
-    m_shader->setUnif( "uf_Color", rgba );
+//    m_shader->use();
+//
+//    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
+//                                       0.0f, ( float )height(),
+//                                       -1.0f, 1.0f );
+//    m_shader->setUnif( "uf_Projection", false, projection );
+//
+//    glm::vec4 rgba = glm::vec4( 0.4, 0.2, 0.2, 1.0 );
+//    m_shader->setUnif( "uf_Color", rgba );
 
     GLuint vbo, ebo;
     glGenBuffers( 1, &vbo );
@@ -100,11 +99,11 @@ void ExampleTriangle::paintGL() {
     glBufferData( GL_ARRAY_BUFFER, 3 * sizeof( Vertex ), vertices, GL_STATIC_DRAW );
 
     GLuint stride = sizeof( Vertex );
-    glVertexAttribPointer( m_shader->getAttrHandle( "in_Position" ), 2, GL_FLOAT, GL_FALSE, stride, ( void * ) + 0 );
-    glVertexAttribPointer( m_shader->getAttrHandle( "in_TextureUV" ), 2, GL_FLOAT, GL_FALSE, stride, ( void * ) + 2 );
-
-    glEnableVertexAttribArray( m_shader->getAttrHandle( "in_Position" ) );
-    glEnableVertexAttribArray( m_shader->getAttrHandle( "in_TextureUV" ) );
+//    glVertexAttribPointer( m_shader->getAttrHandle( "in_Position" ), 2, GL_FLOAT, GL_FALSE, stride, ( void * ) + 0 );
+//    glVertexAttribPointer( m_shader->getAttrHandle( "in_TextureUV" ), 2, GL_FLOAT, GL_FALSE, stride, ( void * ) + 2 );
+//
+//    glEnableVertexAttribArray( m_shader->getAttrHandle( "in_Position" ) );
+//    glEnableVertexAttribArray( m_shader->getAttrHandle( "in_TextureUV" ) );
 
     glBindBuffer( GL_ELEMENT_ARRAY_BUFFER, ebo );
     glBufferData( GL_ELEMENT_ARRAY_BUFFER, 3 * sizeof( GLuint ), elements, GL_STATIC_DRAW );

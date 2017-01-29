@@ -40,7 +40,7 @@ file(GLOB_RECURSE SOURCE_FILES "*.cc" "*.hh")
 
 add_executable(${APP} ${SOURCE_FILES})
 
-#Link the helloworld executable to the Qt 5 widgets library.
+# Link the helloworld executable to the Qt 5 widgets library.
 target_link_libraries(${APP}
         ${Qt5Widgets_LIBRARIES}
         ${OPENGL_LIBRARIES}
@@ -54,6 +54,6 @@ target_link_libraries(${APP} "-framework Cocoa")
 target_link_libraries(${APP} "-framework IOKit")
 target_link_libraries(${APP} "-framework CoreVideo")
 
-#message(WARNING ${SOURCE_FILES})
-#message(WARNING ${FREETYPE_INCLUDE_DIRS})
-#message(WARNING ${FREETYPE_LIBRARIES})
+message(WARNING ${SEV_INCLUDE_DIR})
+message(WARNING ${FREETYPE_INCLUDE_DIRS})
+message(WARNING ${FREETYPE_LIBRARIES})

@@ -66,7 +66,7 @@ void ExampleFreeTypeFont::initializeGL() {
     const char* vertexShaderStr = readShaderFile( vertexPath );
     const char* fragmentShaderStr = readShaderFile( fragmentPath );
 
-    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
+//    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
 
     // Set OpenGL options
     glEnable(GL_CULL_FACE);
@@ -160,13 +160,13 @@ void ExampleFreeTypeFont::cleanup()
 void ExampleFreeTypeFont::RenderText(std::string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color, GLuint VAO, GLuint VBO )
 {
     // Activate corresponding render state
-    m_shader->use();
-    m_shader->setUnif( "textColor", color );
-
-
-    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
-                                       0.0f, ( float )height() );
-    m_shader->setUnif( "uf_Projection", false, projection );
+//    m_shader->use();
+//    m_shader->setUnif( "textColor", color );
+//
+//
+//    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
+//                                       0.0f, ( float )height() );
+//    m_shader->setUnif( "uf_Projection", false, projection );
 
     glActiveTexture(GL_TEXTURE0);
     glActiveTexture(GL_TEXTURE0);

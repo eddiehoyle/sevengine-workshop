@@ -10,7 +10,7 @@
 
 #include <sev/Utilities.hh>
 #include <sev/core/Transform.hh>
-
+#include <sev/graphics/shader/ShaderManager.hh>
 #include <QTimer>
 
 #include <glm/glm.hpp>
@@ -29,8 +29,8 @@ ExampleAnimatedTexturedRect::ExampleAnimatedTexturedRect(QWidget *parent)
         : QOpenGLWidget( parent )
 {
     QTimer* aTimer = new QTimer;
-    connect( aTimer, SIGNAL( timeout() ), this, SLOT( animate() ) );
-    aTimer->start(30);
+    QObject::connect( aTimer, SIGNAL( timeout() ), this, SLOT( animate() ) );
+    aTimer->start( 15 );
 }
 
 ExampleAnimatedTexturedRect::~ExampleAnimatedTexturedRect()
@@ -41,7 +41,7 @@ ExampleAnimatedTexturedRect::~ExampleAnimatedTexturedRect()
 void ExampleAnimatedTexturedRect::animate()
 {
     // Rotate
-    angle += 3.0f;
+    angle += 1.0f;
 
     // Position
     position.y = std::sin( translateY += 0.1f ) * 20;
@@ -65,29 +65,29 @@ void ExampleAnimatedTexturedRect::initializeGL() {
 
     glClearColor(1, 0.35, 0.35, 1);
 
-    const char* vertexPath = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/texture.vert";
-    const char* fragmentPath = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/texture.frag";
-
-    const char* vertexShaderStr = readShaderFile( vertexPath );
-    const char* fragmentShaderStr = readShaderFile( fragmentPath );
-
-    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
+    ShaderManager::instance();
 
     const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/bomb.png";
     m_texture = new Texture2D( path );
     m_texture->setResizeMode( GL_NEAREST, GL_NEAREST );
     m_texture->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
-    m_render = new RenderRect( m_shader );
+    m_render = new RenderRect();
 }
 
 void ExampleAnimatedTexturedRect::paintGL()
 {
-    m_shader->use();
+    ShaderManager::instance()->use( "texture" );
+
+//    glUseProgram( m_shader->getProgram() );
 
     glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
                                        0.0f, ( float )height() );
-    m_shader->setUnif( "uf_Projection", false, projection );
+//    m_shader->setUnif( "uf_Projection", false, projection );
+//    glUniformMatrix4fv( glGetUniformLocation( m_shader->getProgram(), "uf_Projection" ),
+//                        1, GL_FALSE, glm::value_ptr( projection ) );
+
+    ShaderManager::instance()->setUnif( "uf_Projection", false, projection );
 
     int size = 100;
     Transform transform( glm::vec2( 0.0f, 0.0f ), 0.0f, glm::vec2( 1.0f, 1.0f ) );
@@ -97,14 +97,14 @@ void ExampleAnimatedTexturedRect::paintGL()
     transform.setPosition( position );
     transform.setScale( scale, scale );
 
-    Quad a( size, size );
-    a.setUV( 0.0, 1.0, 0.0, 1.0 );
-    a.setMatrix( transform.getMatrix() );
+    Quad q( size, size );
+    q.setUV( 0.0, 1.0, 0.0, 1.0 );
+    q.setMatrix( transform.getMatrix() );
 
     Texture2D::bind( m_texture, GL_TEXTURE0 );
 
-    m_render->buffer( a );
-    m_render->allocate();
+    m_render->buffer( q );
+    m_render->bind();
     m_render->draw();
     m_render->release();
 

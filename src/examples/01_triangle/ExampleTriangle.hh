@@ -11,8 +11,6 @@
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
 
-#include <sev/core/Shader.hh>
-
 //namespace E01 {
 //    class ExampleTriangle;
 //}
@@ -37,8 +35,8 @@ public slots:
     void cleanup();
     void animate();
 
-private:
-    Shader* m_shader;
+//private:
+//    Shader* m_shader;
 
 };
 

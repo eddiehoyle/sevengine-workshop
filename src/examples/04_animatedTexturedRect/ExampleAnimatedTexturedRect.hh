@@ -11,9 +11,9 @@
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
 
-#include <sev/core/Shader.hh>
 #include <sev/graphics/Texture.hh>
 #include <sev/graphics/render/RenderRect.hh>
+#include <sev/graphics/shader/ShaderManager.hh>
 
 namespace E04 {
 
@@ -36,7 +36,8 @@ public slots:
     void animate();
 
 private:
-    Shader* m_shader;
+//    Shader* m_shader;
+//    TextureShader* m_shader;
     Texture2D* m_texture;
     RenderRect* m_render;
 

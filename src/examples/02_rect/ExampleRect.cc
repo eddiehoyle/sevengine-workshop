@@ -53,25 +53,25 @@ void ExampleRect::initializeGL() {
     const char* vertexShaderStr = readShaderFile( vertexPath );
     const char* fragmentShaderStr = readShaderFile( fragmentPath );
 
-    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
-    m_shader->bindAttr( 0, "in_Position" );
+//    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
+//    m_shader->bindAttr( 0, "in_Position" );
 
-    m_render = new RenderRect( m_shader );
+    m_render = new RenderRect();
 }
 
 void ExampleRect::paintGL()
 {
     qDebug( "E02::ExampleTriangle::paintGL()" );
 
-    m_shader->use();
+//    m_shader->use();
 
-    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
-                                       0.0f, ( float )height(),
-                                       -1.0f, 1.0f );
-    m_shader->setUnif( "uf_Projection", false, projection );
-
-    glm::vec4 rgba = glm::vec4( 0.4, 0.2, 0.2, 1.0 );
-    m_shader->setUnif( "uf_Color", rgba );
+//    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
+//                                       0.0f, ( float )height(),
+//                                       -1.0f, 1.0f );
+//    m_shader->setUnif( "uf_Projection", false, projection );
+//
+//    glm::vec4 rgba = glm::vec4( 0.4, 0.2, 0.2, 1.0 );
+//    m_shader->setUnif( "uf_Color", rgba );
 
     int size = 100;
     int offsetX = ( width() / 2 ) - ( size / 2 );
@@ -85,7 +85,10 @@ void ExampleRect::paintGL()
     a.setMatrix( transform.getMatrix() );
 
     m_render->buffer( a );
+    m_render->bind();
     m_render->draw();
+    m_render->release();
+
 
 }
 

@@ -47,7 +47,7 @@ void ExampleTextureAtlasFont::resizeGL( int width, int height )
 
 void ExampleTextureAtlasFont::initializeGL() {
 
-    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &ExampleFreeTypeFont::cleanup );
+    QObject::connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &ExampleTextureAtlasFont::cleanup );
 
     initializeOpenGLFunctions();
 
@@ -60,7 +60,7 @@ void ExampleTextureAtlasFont::initializeGL() {
     const char* vertexShaderStr = readShaderFile( vertexPath );
     const char* fragmentShaderStr = readShaderFile( fragmentPath );
 
-    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
+//    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
 
 }
 

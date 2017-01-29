@@ -55,23 +55,23 @@ void ExampleTexturedRect::initializeGL() {
     const char* vertexShaderStr = readShaderFile( vertexPath );
     const char* fragmentShaderStr = readShaderFile( fragmentPath );
 
-    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
+//    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
 
     const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/cats.png";
     m_texture = new Texture2D( path );
     m_texture->setResizeMode( GL_LINEAR, GL_LINEAR );
     m_texture->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
-    m_render = new RenderRect( m_shader );
+    m_render = new RenderRect();
 }
 
 void ExampleTexturedRect::paintGL()
 {
-    m_shader->use();
-
-    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
-                                       0.0f, ( float )height() );
-    m_shader->setUnif( "uf_Projection", false, projection );
+//    m_shader->use();
+//
+//    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
+//                                       0.0f, ( float )height() );
+//    m_shader->setUnif( "uf_Projection", false, projection );
 
     int size = 100;
 
@@ -122,7 +122,7 @@ void ExampleTexturedRect::paintGL()
     m_render->buffer( c );
     m_render->buffer( d );
 
-    m_render->allocate();
+    m_render->bind();
     m_render->draw();
     m_render->release();
 
