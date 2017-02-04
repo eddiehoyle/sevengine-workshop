@@ -10,5 +10,7 @@
 #include "src/examples/03_texturedRect/ExampleTexturedRect.hh"
 #include "src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh"
 #include "src/examples/05_freeTypeFont/ExampleFreeTypeFont.hh"
+#include "src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh"
+#include "src/examples/07_multiTexture/ExampleMultiTexture.hh"
 
 #endif //SEVENGINE_WORKSHOP_EXAMPLES_HH

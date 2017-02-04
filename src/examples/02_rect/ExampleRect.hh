@@ -44,7 +44,7 @@ public slots:
 
 private:
     Shader* m_shader;
-    Texture* m_texture;
+    Texture2D* m_texture;
     RenderRect* m_render;
 
 };

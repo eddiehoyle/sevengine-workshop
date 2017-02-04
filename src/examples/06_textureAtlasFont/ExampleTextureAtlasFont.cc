@@ -17,6 +17,7 @@
 #include <glm/ext.hpp>
 
 #include <ft2build.h>
+#include <sev/graphics/shader/ShaderManager.hh>
 #include FT_FREETYPE_H
 #include FT_TYPES_H
 
@@ -47,20 +48,18 @@ void ExampleTextureAtlasFont::resizeGL( int width, int height )
 
 void ExampleTextureAtlasFont::initializeGL() {
 
-    QObject::connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &ExampleTextureAtlasFont::cleanup );
+    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &ExampleTextureAtlasFont::cleanup );
 
     initializeOpenGLFunctions();
 
     glClearColor(1, 0.35, 0.35, 1);
-    glClear(GL_COLOR_BUFFER_BIT);
 
-    const char* vertexPath = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/texture.vert";
-    const char* fragmentPath = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/texture.frag";
+    ShaderManager::instance();
 
-    const char* vertexShaderStr = readShaderFile( vertexPath );
-    const char* fragmentShaderStr = readShaderFile( fragmentPath );
-
-//    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
+    const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/simpleFont.png";
+    m_texture = new Texture2D( path );
+    m_texture->setResizeMode( GL_NEAREST, GL_NEAREST );
+    m_texture->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
 }
 

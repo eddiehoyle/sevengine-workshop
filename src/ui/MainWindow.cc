@@ -32,6 +32,8 @@ MainWindow::MainWindow()
     items << "Texture Rect";
     items << "Texture Alpha Rect";
     items << "Text";
+    items << "Atlas Font";
+    items << "Multi Texture";
 
     combo->addItems( items );
 
@@ -45,8 +47,11 @@ MainWindow::MainWindow()
 
     m_layout->addLayout( optionLayout );
 
-    setExperiment( kExampleRectTextureAlpha );
-    combo->setCurrentIndex( 3 );
+//    setExperiment( kExampleRectTextureAlpha );
+//    combo->setCurrentIndex( 3 );
+
+    setExperiment( kExampleMultiTexture );
+    combo->setCurrentIndex( 6 );
 }
 
 void MainWindow::change( int index )
@@ -78,6 +83,12 @@ void MainWindow::setExperiment( ExampleType type )
             break;
         case kExampleText:
             m_gl = new E05::ExampleFreeTypeFont();
+            break;
+        case kExampleAtlasFont:
+            m_gl = new E06::ExampleTextureAtlasFont();
+            break;
+        case kExampleMultiTexture:
+            m_gl = new E07::ExampleMultiTexture();
             break;
         default:
             m_gl = new E01::ExampleTriangle();

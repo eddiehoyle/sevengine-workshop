@@ -13,7 +13,8 @@ enum ExampleType {
     kExampleRectTexture = 2,
     kExampleRectTextureAlpha = 3,
     kExampleText = 4,
-
+    kExampleAtlasFont = 5,
+    kExampleMultiTexture = 6
 };
 
 //class Window : public QMainWindow

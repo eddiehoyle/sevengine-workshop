@@ -16,7 +16,30 @@
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 
-#include <QTimer>
+#include <iostream>
+#include <ctime> // Needed for the true randomization
+#include <cstdlib>
+#include <random>
+
+
+
+
+int getRandom( int floor, int ceiling ) {
+    srand(time(0));
+    int range = (ceiling - floor);
+    int rnd = floor + int(((double)range * rand()) / (RAND_MAX + 1.0));
+    return rnd;
+}
+
+float RandomFloat(float min, float max)
+{
+    std::random_device rd;     // only used once to initialise (seed) engine
+    std::mt19937 rng(rd());    // random-number engine used (Mersenne-Twister in this case)
+    std::uniform_int_distribution<int> uni(min,max); // guaranteed unbiased
+
+    float rv = (float)uni(rng);
+    return rv;
+}
 
 namespace E04 {
 
@@ -54,7 +77,25 @@ void ExampleAnimatedTexturedRect::animate()
 
 void ExampleAnimatedTexturedRect::resizeGL( int width, int height )
 {
-    // TODO
+    m_positions.clear();
+
+    srand( time( 0 ) ); // This will ensure a really randomized number by help of time.
+
+    int xRan;
+    int minHPos, minWPos;
+    minHPos = minWPos = - 200;
+    int maxHPos = height;
+    int maxWPos = width;
+    int numItems = 1000;
+
+    int x, y;
+    for ( int index = 0; index < numItems; index++ ) {
+
+        x = RandomFloat( (float)minWPos, float(maxWPos));
+        y = RandomFloat( (float)minHPos, float(maxHPos));
+
+        m_positions.push_back( std::pair< int, int >( x, y ) );
+    }
 }
 
 void ExampleAnimatedTexturedRect::initializeGL() {
@@ -71,43 +112,61 @@ void ExampleAnimatedTexturedRect::initializeGL() {
     m_texture = new Texture2D( path );
     m_texture->setResizeMode( GL_NEAREST, GL_NEAREST );
     m_texture->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
-
-    m_render = new RenderRect();
 }
 
 void ExampleAnimatedTexturedRect::paintGL()
 {
     ShaderManager::instance()->use( "texture" );
-
-//    glUseProgram( m_shader->getProgram() );
-
     glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
                                        0.0f, ( float )height() );
-//    m_shader->setUnif( "uf_Projection", false, projection );
-//    glUniformMatrix4fv( glGetUniformLocation( m_shader->getProgram(), "uf_Projection" ),
-//                        1, GL_FALSE, glm::value_ptr( projection ) );
-
     ShaderManager::instance()->setUnif( "uf_Projection", false, projection );
 
+
+    BufferQuad buffer = BufferQuad();
     int size = 100;
-    Transform transform( glm::vec2( 0.0f, 0.0f ), 0.0f, glm::vec2( 1.0f, 1.0f ) );
-    transform.setPivot( glm::vec2( size / 2, size / 2 ) );
+    std::vector< Quad > quads;
 
-    transform.setAngle( angle );
-    transform.setPosition( position );
-    transform.setScale( scale, scale );
+    for ( int index = 0; index < m_positions.size(); index++ ) {
 
-    Quad q( size, size );
-    q.setUV( 0.0, 1.0, 0.0, 1.0 );
-    q.setMatrix( transform.getMatrix() );
+        int x = m_positions[index].first;
+        int y = m_positions[index].second;
+
+        Transform transform( glm::vec2( 0, 0 ), 0.0f, glm::vec2( 1.0f, 1.0f ) );
+        transform.setPivot( glm::vec2( size / 2, size / 2 ) );
+
+        glm::vec2 position2( x, y + position.y );
+        if ( index % 2 == 0 ) {
+            position.y *= 1.003;
+            transform.setAngle( angle * 1.05 );
+        } else if ( index % 7 == 0 ) {
+            position.y *= 0.997;
+        }
+        transform.setAngle( angle );
+        transform.setPosition( position2 );
+        transform.setScale( scale, scale );
+
+        Quad q( size, size );
+        q.setUV( 0.0, 1.0, 0.0, 1.0 );
+        q.setMatrix( transform.getMatrix() );
+        quads.push_back( q );
+
+    }
+
+    buffer.add( quads );
 
     Texture2D::bind( m_texture, GL_TEXTURE0 );
 
-    m_render->buffer( q );
-    m_render->bind();
-    m_render->draw();
-    m_render->release();
+    RenderQuad render = RenderQuad( buffer );
+    render.bind();
 
+    ShaderManager::instance()->enable();
+
+    render.draw();
+    render.release();
+
+    buffer.clear();
+    ShaderManager::instance()->disable();
+    ShaderManager::instance()->release();
     Texture2D::release( m_texture );
 }
 

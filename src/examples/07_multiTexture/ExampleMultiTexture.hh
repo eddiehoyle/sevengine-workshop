@@ -1,9 +1,9 @@
 //
-// Created by Eddie Hoyle on 13/11/16.
+// Created by Eddie Hoyle on 31/01/17.
 //
 
-#ifndef SEVENGINE_WORKSHOP_04_EXAMPLE_HH
-#define SEVENGINE_WORKSHOP_04_EXAMPLE_HH
+#ifndef SEVENGINE_WORKSHOP_EXAMPLEMULTITEXTURE_HH
+#define SEVENGINE_WORKSHOP_EXAMPLEMULTITEXTURE_HH
 
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions>
@@ -16,17 +16,16 @@
 #include <sev/graphics/render/RenderQuad.hh>
 #include <sev/graphics/shader/ShaderManager.hh>
 
-namespace E04 {
+namespace E07 {
 
-class ExampleAnimatedTexturedRect
+class ExampleMultiTexture
         : public QOpenGLWidget,
-          protected QOpenGLFunctions
-{
-    Q_OBJECT
+          protected QOpenGLFunctions {
+Q_OBJECT
 
 public:
-    explicit ExampleAnimatedTexturedRect( QWidget* parent = NULL );
-    ~ExampleAnimatedTexturedRect();
+    explicit ExampleMultiTexture( QWidget* parent = NULL );
+    ~ExampleMultiTexture();
 
     void initializeGL() Q_DECL_OVERRIDE;
     void resizeGL( int width, int height ) Q_DECL_OVERRIDE;
@@ -37,15 +36,11 @@ public slots:
     void animate();
 
 private:
-//    Shader* m_shader;
-//    TextureShader* m_shader;
-    Texture2D* m_texture;
-
-    // Flame positions
-    std::vector< std::pair< int, int > > m_positions;
-
+    Texture2D* m_bomb;
+    Texture2D* m_cat;
 };
 
 }
 
-#endif //SEVENGINE_WORKSHOP_04_EXAMPLE_HH
+
+#endif //SEVENGINE_WORKSHOP_EXAMPLEMULTITEXTURE_HH
