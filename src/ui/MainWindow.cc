@@ -28,11 +28,11 @@ MainWindow::MainWindow()
 
     QStringList items;
     items << "Triangle";
-    items << "Rect";
-    items << "Texture Rect";
-    items << "Texture Alpha Rect";
-    items << "Text";
-    items << "Atlas Font";
+    items << "Particles";
+    items << "4 cats";
+    items << "Lots of bombs";
+    items << "Font";
+    items << "Atlas Font Texture";
     items << "Multi Texture";
 
     combo->addItems( items );
@@ -72,8 +72,8 @@ void MainWindow::setExperiment( ExampleType type )
         case kExampleTriangle:
             m_gl = new E01::ExampleTriangle();
             break;
-        case kExampleRect:
-            m_gl = new E02::ExampleRect();
+        case kExampleParticles:
+            m_gl = new E02::ExampleParticles();
             break;
         case kExampleRectTexture:
             m_gl = new E03::ExampleTexturedRect();

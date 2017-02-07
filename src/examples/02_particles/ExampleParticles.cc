@@ -2,7 +2,7 @@
 // Created by Eddie Hoyle on 13/11/16.
 //
 
-#include "ExampleRect.hh"
+#include "ExampleParticles.hh"
 
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
@@ -12,10 +12,11 @@
 #include <sev/core/Transform.hh>
 
 #include <QTimer>
+#include <sev/graphics/shader/ShaderManager.hh>
 
 namespace E02 {
 
-ExampleRect::ExampleRect(QWidget *parent)
+ExampleParticles::ExampleParticles(QWidget *parent)
         : QOpenGLWidget( parent )
 {
     QTimer* aTimer = new QTimer;
@@ -23,45 +24,41 @@ ExampleRect::ExampleRect(QWidget *parent)
     aTimer->start(30);
 }
 
-ExampleRect::~ExampleRect()
+ExampleParticles::~ExampleParticles()
 {
     cleanup();
 }
 
-void ExampleRect::animate()
+void ExampleParticles::animate()
 {
     /// TODO
 }
 
-void ExampleRect::resizeGL( int width, int height )
+void ExampleParticles::resizeGL( int width, int height )
 {
     // TODO
 }
 
-void ExampleRect::initializeGL() {
+void ExampleParticles::initializeGL() {
 
-    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &ExampleRect::cleanup );
+    connect( context(), &QOpenGLContext::aboutToBeDestroyed, this, &ExampleParticles::cleanup );
 
     initializeOpenGLFunctions();
-//    printContextInformation( context(), format() );
 
     glClearColor(1, 0.35, 0.35, 1);
 
-    const char* vertexPath = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/simple.vert";
-    const char* fragmentPath = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/simple.frag";
-
-    const char* vertexShaderStr = readShaderFile( vertexPath );
-    const char* fragmentShaderStr = readShaderFile( fragmentPath );
-
-//    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
-//    m_shader->bindAttr( 0, "in_Position" );
-
-    m_render = new RenderRect();
+    ShaderManager::instance();
 }
 
-void ExampleRect::paintGL()
+void ExampleParticles::paintGL()
 {
     qDebug( "E02::ExampleTriangle::paintGL()" );
+
+    ShaderManager::instance()->use( "particle" );
+    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
+                                       0.0f, ( float )height(),
+                                       -1.0f, 1.0f );
+    ShaderManager::instance()->setUnif( "uf_Projection", false, projection );
 
 //    m_shader->use();
 
@@ -92,7 +89,7 @@ void ExampleRect::paintGL()
 
 }
 
-void ExampleRect::cleanup()
+void ExampleParticles::cleanup()
 {
     // TODO
 }

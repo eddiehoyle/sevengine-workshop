@@ -37,9 +37,6 @@ public slots:
     void animate();
 
 private:
-//    Shader* m_shader;
-//    TextureShader* m_shader;
-    Texture2D* m_texture;
 
     // Flame positions
     std::vector< std::pair< int, int > > m_positions;

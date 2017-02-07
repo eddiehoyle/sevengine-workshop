@@ -6,6 +6,7 @@
 
 #include <QTimer>
 
+#include <sev/graphics/texture/TextureManager2D.hh>
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 #include <sev/core/Transform.hh>
@@ -52,16 +53,21 @@ void ExampleMultiTexture::initializeGL() {
 
     // Old way
     const char* bombPath = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/bomb.png";
-    m_bomb = new Texture2D( bombPath );
-    m_bomb->setResizeMode( GL_NEAREST, GL_NEAREST );
-    m_bomb->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
+//    m_bomb = new Texture2D( bombPath );
+//    m_bomb->setResizeMode( GL_NEAREST, GL_NEAREST );
+//    m_bomb->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
     // Old way
     const char* catPath = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/cat.png";
-    m_cat = new Texture2D( catPath );
-    m_cat->setResizeMode( GL_NEAREST, GL_NEAREST );
-    m_cat->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
+//    m_cat = new Texture2D( catPath );
+//    m_cat->setResizeMode( GL_NEAREST, GL_NEAREST );
+//    m_cat->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
+    const char* cat2Path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/cat3.png";
+
+    TextureManager2D::instance()->load( "bomb", bombPath );
+    TextureManager2D::instance()->load( "cat", catPath );
+    TextureManager2D::instance()->load( "cat", cat2Path );
 }
 
 void ExampleMultiTexture::paintGL() {
@@ -71,21 +77,17 @@ void ExampleMultiTexture::paintGL() {
                                        0.0f, ( float )height() );
     ShaderManager::instance()->setUnif( "uf_Projection", false, projection );
 
-    // Textures need to be bound to units for each draw tick.
-    // Not sure why this is yet...
-    glActiveTexture( GL_TEXTURE0 );
-    glBindTexture( GL_TEXTURE_2D, m_bomb->getHandle() );
-
-    glActiveTexture( GL_TEXTURE0 + 1 );
-    glBindTexture( GL_TEXTURE_2D, m_cat->getHandle() );
+    TextureManager2D::instance()->enable();
+    TextureManager2D::instance()->bind( "bomb", 0 );
+    TextureManager2D::instance()->bind( "bomb", 1 );
 
     // --------------------------------------------------------------------------------
 
-    int size = 100;
+    int size = 400;
     Transform transform( glm::vec2( 0, 0 ), 0.0f, glm::vec2( 1.0f, 1.0f ) );
     transform.setPivot( glm::vec2( size / 2, size / 2 ) );
     transform.setAngle( 0.0f );
-    transform.setPosition( glm::vec2( 100, 100 ));
+    transform.setPosition( glm::vec2( 0, 0 ));
     transform.setScale( 1.0f, 1.0f );
 
     // --------------------------------------------------------------------------------
@@ -105,6 +107,8 @@ void ExampleMultiTexture::paintGL() {
 
     // Tell 'uf_Texture' sampler in fragment shader to use the texture bound to GL_TEXTURE0
     ShaderManager::instance()->setUnif( "uf_Texture", 0 );
+    TextureManager2D::instance()->setResizeMode( GL_NEAREST, GL_NEAREST );
+    TextureManager2D::instance()->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
     bombRender.draw();
     bombBuffer.clear();
@@ -117,7 +121,7 @@ void ExampleMultiTexture::paintGL() {
     catQuad.setUV( 0.0, 1.0, 0.0, 1.0 );
 
     Transform catTransform = transform;
-    catTransform.setPosition( glm::vec2( 200, 100 ) );
+    catTransform.setPosition( glm::vec2( 200, 0 ) );
     catQuad.setMatrix( catTransform.getMatrix() );
 
     BufferQuad catBuffer;
@@ -130,6 +134,8 @@ void ExampleMultiTexture::paintGL() {
 
     // Tell 'uf_Texture' sampler in fragment shader to use the texture bound to GL_TEXTURE1
     ShaderManager::instance()->setUnif( "uf_Texture", 1 );
+    TextureManager2D::instance()->setResizeMode( GL_LINEAR, GL_LINEAR );
+    TextureManager2D::instance()->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
     catRender.draw();
     catBuffer.clear();
@@ -138,8 +144,8 @@ void ExampleMultiTexture::paintGL() {
 
     ShaderManager::instance()->disable();
     ShaderManager::instance()->release();
-    Texture2D::release( m_bomb );
-    Texture2D::release( m_cat );
+//    Texture2D::release( m_bomb );
+//    Texture2D::release( m_cat );
 
 }
 

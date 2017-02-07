@@ -5,8 +5,6 @@
 #ifndef SEVENGINE_WORKSHOP_02_EXAMPLE_HH
 #define SEVENGINE_WORKSHOP_02_EXAMPLE_HH
 
-//#include "../AbstractExample.hh"
-
 
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions>
@@ -17,22 +15,18 @@
 #include <sev/graphics/Texture.hh>
 #include <sev/graphics/render/RenderRect.hh>
 
-//namespace E02 {
-//    class ExampleTriangle;
-//}
-
 namespace E02 {
 
 
-class ExampleRect
+class ExampleParticles
         : public QOpenGLWidget,
           protected QOpenGLFunctions
 {
     Q_OBJECT
 
 public:
-    explicit ExampleRect( QWidget* parent = NULL );
-    ~ExampleRect();
+    explicit ExampleParticles( QWidget* parent = NULL );
+    ~ExampleParticles();
 
     void initializeGL() Q_DECL_OVERRIDE;
     void resizeGL( int width, int height ) Q_DECL_OVERRIDE;

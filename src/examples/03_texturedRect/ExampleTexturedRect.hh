@@ -38,12 +38,6 @@ public slots:
     void cleanup();
     void animate();
 
-private:
-//    Shader* m_shader;
-    Texture2D* m_texture;
-    Texture2D* m_texture2;
-    RenderRect* m_render;
-
 };
 
 }

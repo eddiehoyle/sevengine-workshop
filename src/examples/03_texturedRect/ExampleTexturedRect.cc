@@ -15,6 +15,9 @@
 #include <glm/glm.hpp>
 
 #include <QTimer>
+#include <sev/graphics/shader/ShaderManager.hh>
+#include <sev/graphics/texture/TextureManager2D.hh>
+#include <sev/graphics/render/RenderQuad.hh>
 
 namespace E03 {
 
@@ -49,29 +52,23 @@ void ExampleTexturedRect::initializeGL() {
 
     glClearColor(1, 0.35, 0.35, 1);
 
-    const char* vertexPath = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/texture.vert";
-    const char* fragmentPath = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/texture.frag";
-
-    const char* vertexShaderStr = readShaderFile( vertexPath );
-    const char* fragmentShaderStr = readShaderFile( fragmentPath );
-
-//    m_shader = new Shader( vertexShaderStr, fragmentShaderStr );
+    ShaderManager::instance();
 
     const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/cats.png";
-    m_texture = new Texture2D( path );
-    m_texture->setResizeMode( GL_LINEAR, GL_LINEAR );
-    m_texture->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
-
-    m_render = new RenderRect();
+    TextureManager2D::instance()->load( "cats", path );
 }
 
 void ExampleTexturedRect::paintGL()
 {
-//    m_shader->use();
-//
-//    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
-//                                       0.0f, ( float )height() );
-//    m_shader->setUnif( "uf_Projection", false, projection );
+    ShaderManager::instance()->use( "texture" );
+    glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
+                                       0.0f, ( float )height() );
+    ShaderManager::instance()->setUnif( "uf_Projection", false, projection );
+    ShaderManager::instance()->setUnif( "uf_Texture", 0 );
+
+    TextureManager2D::instance()->bind( "cats", 0 );
+    TextureManager2D::instance()->setResizeMode( GL_NEAREST, GL_NEAREST );
+    TextureManager2D::instance()->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
     int size = 100;
 
@@ -115,23 +112,28 @@ void ExampleTexturedRect::paintGL()
     d.setUV( 0.0, 0.5, 0.5, 1.0 );
     d.setMatrix( transformD.getMatrix() );
 
-    Texture2D::bind( m_texture, GL_TEXTURE0 );
+    BufferQuad buffer = BufferQuad();
+    buffer.add( a );
+    buffer.add( b );
+    buffer.add( c );
+    buffer.add( d );
 
-    m_render->buffer( a );
-    m_render->buffer( b );
-    m_render->buffer( c );
-    m_render->buffer( d );
+    RenderQuad render = RenderQuad( buffer );
+    render.bind();
 
-    m_render->bind();
-    m_render->draw();
-    m_render->release();
+    ShaderManager::instance()->enable();
 
-    Texture2D::release( m_texture );
+    render.draw();
+    render.release();
+
+    buffer.clear();
+    ShaderManager::instance()->disable();
+    ShaderManager::instance()->release();
 }
 
 void ExampleTexturedRect::cleanup()
 {
-    // TODO
+    TextureManager2D::instance()->unload( "bomb" );
 }
 
 }

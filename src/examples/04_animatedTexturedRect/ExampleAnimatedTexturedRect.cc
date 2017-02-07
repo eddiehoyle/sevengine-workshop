@@ -11,6 +11,7 @@
 #include <sev/Utilities.hh>
 #include <sev/core/Transform.hh>
 #include <sev/graphics/shader/ShaderManager.hh>
+#include <sev/graphics/texture/TextureManager2D.hh>
 #include <QTimer>
 
 #include <glm/glm.hpp>
@@ -109,9 +110,7 @@ void ExampleAnimatedTexturedRect::initializeGL() {
     ShaderManager::instance();
 
     const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/bomb.png";
-    m_texture = new Texture2D( path );
-    m_texture->setResizeMode( GL_NEAREST, GL_NEAREST );
-    m_texture->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
+    TextureManager2D::instance()->load( "bomb", path );
 }
 
 void ExampleAnimatedTexturedRect::paintGL()
@@ -120,12 +119,17 @@ void ExampleAnimatedTexturedRect::paintGL()
     glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
                                        0.0f, ( float )height() );
     ShaderManager::instance()->setUnif( "uf_Projection", false, projection );
+    ShaderManager::instance()->setUnif( "uf_Texture", 0 );
 
+    // Tell 'uf_Texture' sampler in fragment shader to use the texture bound to GL_TEXTURE0
+    TextureManager2D::instance()->bind( "bomb", 0 );
+    TextureManager2D::instance()->setResizeMode( GL_NEAREST, GL_NEAREST );
+    TextureManager2D::instance()->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
+    // Create quads
     BufferQuad buffer = BufferQuad();
-    int size = 100;
-    std::vector< Quad > quads;
 
+    int size = 100;
     for ( int index = 0; index < m_positions.size(); index++ ) {
 
         int x = m_positions[index].first;
@@ -148,13 +152,9 @@ void ExampleAnimatedTexturedRect::paintGL()
         Quad q( size, size );
         q.setUV( 0.0, 1.0, 0.0, 1.0 );
         q.setMatrix( transform.getMatrix() );
-        quads.push_back( q );
-
+        buffer.add( q );
     }
 
-    buffer.add( quads );
-
-    Texture2D::bind( m_texture, GL_TEXTURE0 );
 
     RenderQuad render = RenderQuad( buffer );
     render.bind();
@@ -167,12 +167,11 @@ void ExampleAnimatedTexturedRect::paintGL()
     buffer.clear();
     ShaderManager::instance()->disable();
     ShaderManager::instance()->release();
-    Texture2D::release( m_texture );
 }
 
 void ExampleAnimatedTexturedRect::cleanup()
 {
-    // TODO
+    TextureManager2D::instance()->unload( "bomb" );
 }
 
 }
