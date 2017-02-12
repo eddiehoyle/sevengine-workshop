@@ -12,8 +12,6 @@
 #include <GLES2/gl2.h>
 
 #include <sev/graphics/Texture.hh>
-#include <sev/graphics/render/RenderRect.hh>
-#include <sev/graphics/render/RenderQuad.hh>
 #include <sev/graphics/shader/ShaderManager.hh>
 
 namespace E04 {

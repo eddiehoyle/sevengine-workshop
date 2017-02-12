@@ -11,8 +11,10 @@
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
 
+#include <glm/glm.hpp>
+#include <glm/ext.hpp>
+
 #include <sev/graphics/Texture.hh>
-#include <sev/graphics/render/RenderRect.hh>
 
 namespace E06 {
 
@@ -43,12 +45,6 @@ public:
 public slots:
     void cleanup();
     void animate();
-
-private:
-//    Shader* m_shader;
-    Texture2D* m_texture;
-    RenderRect* m_render;
-
 };
 
 }

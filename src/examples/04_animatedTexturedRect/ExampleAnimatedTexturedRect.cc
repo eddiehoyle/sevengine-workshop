@@ -12,6 +12,7 @@
 #include <sev/core/Transform.hh>
 #include <sev/graphics/shader/ShaderManager.hh>
 #include <sev/graphics/texture/TextureManager2D.hh>
+#include <sev/graphics/render/QuadRender.hh>
 #include <QTimer>
 
 #include <glm/glm.hpp>
@@ -65,7 +66,7 @@ ExampleAnimatedTexturedRect::~ExampleAnimatedTexturedRect()
 void ExampleAnimatedTexturedRect::animate()
 {
     // Rotate
-    angle += 1.0f;
+//    angle += 1.0f;
 
     // Position
     position.y = std::sin( translateY += 0.1f ) * 20;
@@ -155,8 +156,7 @@ void ExampleAnimatedTexturedRect::paintGL()
         buffer.add( q );
     }
 
-
-    RenderQuad render = RenderQuad( buffer );
+    QuadRender render = QuadRender( buffer );
     render.bind();
 
     ShaderManager::instance()->enable();

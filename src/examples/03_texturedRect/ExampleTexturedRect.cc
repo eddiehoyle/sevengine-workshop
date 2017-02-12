@@ -17,7 +17,7 @@
 #include <QTimer>
 #include <sev/graphics/shader/ShaderManager.hh>
 #include <sev/graphics/texture/TextureManager2D.hh>
-#include <sev/graphics/render/RenderQuad.hh>
+#include <sev/graphics/render/QuadRender.hh>
 
 namespace E03 {
 
@@ -99,18 +99,22 @@ void ExampleTexturedRect::paintGL()
     Quad a( size, size );
     a.setUV( 0.0, 0.5, 0.0, 0.5 );
     a.setMatrix( transformA.getMatrix() );
+    a.setColor( 255, 255, 255, 50 );
 
     Quad b( size, size );
     b.setUV( 0.5, 1.0, 0.5, 1.0 );
     b.setMatrix( transformB.getMatrix() );
+    b.setColor( 255, 255, 255, 50 );
 
     Quad c( size, size );
     c.setUV( 0.5, 1.0, 0.0, 0.5 );
     c.setMatrix( transformC.getMatrix() );
+    c.setColor( 255, 255, 255, 50 );
 
     Quad d( size, size );
     d.setUV( 0.0, 0.5, 0.5, 1.0 );
     d.setMatrix( transformD.getMatrix() );
+    d.setColor( 255, 255, 255, 50 );
 
     BufferQuad buffer = BufferQuad();
     buffer.add( a );
@@ -118,7 +122,7 @@ void ExampleTexturedRect::paintGL()
     buffer.add( c );
     buffer.add( d );
 
-    RenderQuad render = RenderQuad( buffer );
+    QuadRender render = QuadRender( buffer );
     render.bind();
 
     ShaderManager::instance()->enable();

@@ -100,7 +100,7 @@ void ExampleMultiTexture::paintGL() {
     BufferQuad bombBuffer = BufferQuad();
     bombBuffer.add( bombQuad );
 
-    RenderQuad bombRender = RenderQuad( bombBuffer );
+    QuadRender bombRender = QuadRender( bombBuffer );
     bombRender.bind();
 
     ShaderManager::instance()->enable();
@@ -127,7 +127,7 @@ void ExampleMultiTexture::paintGL() {
     BufferQuad catBuffer;
     catBuffer.add( catQuad );
 
-    RenderQuad catRender = RenderQuad( catBuffer );
+    QuadRender catRender = QuadRender( catBuffer );
     catRender.bind();
 
     ShaderManager::instance()->enable();

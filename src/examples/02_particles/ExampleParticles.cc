@@ -12,10 +12,27 @@
 #include <sev/core/Transform.hh>
 
 #include <QTimer>
-#include <sev/graphics/render/RenderParticle.hh>
+#include <sev/graphics/render/ParticleRender.hh>
 #include <sev/graphics/shader/ShaderManager.hh>
+#include <sev/graphics/texture/TextureManager2D.hh>
+
+#include <iostream>
+#include <ctime> // Needed for the true randomization
+#include <cstdlib>
+#include <random>
 
 namespace E02 {
+
+
+float RandomFloat(float min, float max)
+{
+    std::random_device rd;     // only used once to initialise (seed) engine
+    std::mt19937 rng(rd());    // random-number engine used (Mersenne-Twister in this case)
+    std::uniform_int_distribution<int> uni(min,max); // guaranteed unbiased
+
+    float rv = (float)uni(rng);
+    return rv;
+}
 
 ExampleParticles::ExampleParticles(QWidget *parent)
         : QOpenGLWidget( parent )
@@ -49,6 +66,10 @@ void ExampleParticles::initializeGL() {
     glClearColor(1, 0.35, 0.35, 1);
 
     ShaderManager::instance();
+
+    // Load bomb
+    const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/grass.png";
+    TextureManager2D::instance()->load( "bomb", path );
 }
 
 void ExampleParticles::paintGL()
@@ -58,21 +79,40 @@ void ExampleParticles::paintGL()
                                        0.0f, ( float )height(),
                                        -1.0f, 1.0f );
     ShaderManager::instance()->setUnif( "uf_Projection", false, projection );
+    ShaderManager::instance()->setUnif( "uf_Texture", 0 );
 
-//    glm::vec4 rgba = glm::vec4( 1.0, 0.0, 0.0, 1.0 );
-//    ShaderManager::instance()->setAttr( "in_Color", rgba );
+    // Tell 'uf_Texture' sampler in fragment shader to use the texture bound to GL_TEXTURE0
+    TextureManager2D::instance()->bind( "bomb", 0 );
+    TextureManager2D::instance()->setResizeMode( GL_NEAREST, GL_NEAREST );
+    TextureManager2D::instance()->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
+
 
     // ------------------------------------------------------------
 
-    Particle p;
-    p.setPosition( glm::vec2( 100, 100) );
-    p.setSize( 100.0 );
-    p.setColor( 0, 0, 0, 255 );
+    ParticleBuffer buffer;
 
-    BufferParticle buffer;
-    buffer.add( p );
+    int minHPos = 0;
+    int minWPos = 0;
+    int maxHPos = height();
+    int maxWPos = width();
 
-    RenderParticle render( buffer );
+    int x, y;
+    int num = 100;
+
+    for ( int i = 0; i < num; i++ ) {
+
+        x = RandomFloat( ( float )minWPos, float( maxWPos ) );
+        y = RandomFloat( ( float )minHPos, float( maxHPos ) );
+
+        Particle p;
+        p.setPosition( glm::vec2( x, y) );
+        p.setSize( 100.0 );
+        p.setColor( 255, 255, 255, 255 );
+
+        buffer.add( p );
+    }
+
+    ParticleRender render( buffer );
     render.bind();
 
     ShaderManager::instance()->enable();

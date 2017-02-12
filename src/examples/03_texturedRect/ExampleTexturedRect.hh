@@ -15,8 +15,6 @@
 #include <GLES2/gl2.h>
 
 #include <sev/graphics/Texture.hh>
-#include <sev/graphics/render/RenderRect.hh>
-
 
 namespace E03 {
 

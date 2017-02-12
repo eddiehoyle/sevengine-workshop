@@ -57,9 +57,9 @@ void ExampleTextureAtlasFont::initializeGL() {
     ShaderManager::instance();
 
     const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/simpleFont.png";
-    m_texture = new Texture2D( path );
-    m_texture->setResizeMode( GL_NEAREST, GL_NEAREST );
-    m_texture->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
+//    m_texture = new Texture2D( path );
+//    m_texture->setResizeMode( GL_NEAREST, GL_NEAREST );
+//    m_texture->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
 }
 

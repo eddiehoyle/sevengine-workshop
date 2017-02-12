@@ -11,8 +11,10 @@
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
 
+#include <glm/glm.hpp>
+#include <glm/ext.hpp>
+
 #include <sev/graphics/Texture.hh>
-#include <sev/graphics/render/RenderRect.hh>
 
 namespace E05 {
 
@@ -49,7 +51,7 @@ public slots:
 private:
 //    Shader* m_shader;
     Texture2D* m_texture;
-    RenderRect* m_render;
+//    RenderRect* m_render;
 
 };
 
