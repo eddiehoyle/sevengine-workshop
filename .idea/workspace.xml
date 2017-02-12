@@ -16,18 +16,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdda0d6d-0cf9-4759-ab3f-a07e467dc181" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/02_rect/ExampleRect.cc" afterPath="$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/examples/02_rect/ExampleRect.hh" afterPath="$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.hh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sevengine-workshop.iml" afterPath="$PROJECT_DIR$/.idea/sevengine-workshop.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc" afterPath="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.hh" afterPath="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.hh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc" afterPath="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh" afterPath="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.cc" afterPath="$PROJECT_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/Examples.hh" afterPath="$PROJECT_DIR$/src/examples/Examples.hh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc" afterPath="$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/MainWindow.cc" afterPath="$PROJECT_DIR$/src/ui/MainWindow.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/MainWindow.hh" afterPath="$PROJECT_DIR$/src/ui/MainWindow.hh" />
     </list>
     <ignored path="sevengine-workshop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,24 +39,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExampleMultiTexture.cc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.cc">
+      <file leaf-file-name="ExampleAnimatedTexturedRect.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state relative-caret-position="-37">
+              <caret line="137" column="24" selection-start-line="137" selection-start-column="24" selection-end-line="137" selection-end-column="24" />
+              <folding>
+                <element signature="e#117#139#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleParticles.cc" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="69" column="28" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="28" />
+              <folding>
+                <element signature="e#106#128#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleParticles.hh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.hh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+              <folding>
+                <element signature="e#130#154#0" expanded="true" />
+                <element signature="e#212#234#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gl3.h" pinned="false" current-in-tab="false">
+        <entry file="file:///System/Library/Frameworks/OpenGL.framework/Headers/gl3.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39">
+              <caret line="509" column="0" selection-start-line="509" selection-start-column="0" selection-end-line="509" selection-end-column="0" />
+              <folding>
+                <element signature="e#22056#25979#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RenderParticle.hh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/render/RenderParticle.hh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExampleAnimatedTexturedRect.cc" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc">
+      <file leaf-file-name="ShaderManager.hh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/shader/ShaderManager.hh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+            <state relative-caret-position="183">
+              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
               <folding>
-                <element signature="e#117#139#0" expanded="true" />
+                <marker date="1486285949000" expanded="true" signature="1939:2047" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleTexturedRect.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="123" column="4" selection-start-line="123" selection-start-column="4" selection-end-line="130" selection-end-column="41" />
+              <folding>
+                <element signature="e#109#131#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindow.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/MainWindow.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vector" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="652" column="0" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -261,6 +333,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="03_texturedRect" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,35 +704,11 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/include/glm/glm.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="82" column="12" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
-          <folding>
-            <element signature="e#3882#3973#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/glm/gtc/matrix_transform.inl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/Quad.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/core/Transform.hh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -905,25 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///System/Library/Frameworks/OpenGL.framework/Headers/gl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="1484" column="48" selection-start-line="1484" selection-start-column="48" selection-end-line="1484" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/shader/ShaderManager.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
-          <folding>
-            <marker date="1486285949000" expanded="false" signature="126:152" ph="..." />
-            <marker date="1486285949000" expanded="true" signature="1939:2047" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/Texture.hh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -969,16 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
-          <folding>
-            <element signature="e#109#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -1001,16 +1046,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/MainWindow.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        <state relative-caret-position="427">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="652" column="0" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="123" column="4" selection-start-line="123" selection-start-column="4" selection-end-line="130" selection-end-column="41" />
+          <folding>
+            <element signature="e#109#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/shader/ShaderManager.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <marker date="1486285949000" expanded="true" signature="1939:2047" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/render/RenderParticle.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/OpenGL.framework/Headers/gl3.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="509" column="0" selection-start-line="509" selection-start-column="0" selection-end-line="509" selection-end-column="0" />
+          <folding>
+            <element signature="e#22056#25979#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="137" column="24" selection-start-line="137" selection-start-column="24" selection-end-line="137" selection-end-column="24" />
+          <folding>
+            <element signature="e#117#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.hh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="86">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
           <folding>
             <element signature="e#130#154#0" expanded="true" />
             <element signature="e#212#234#0" expanded="true" />
@@ -1018,22 +1119,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc">
+    <entry file="file:///System/Library/Frameworks/OpenGL.framework/Headers/gl.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#106#128#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="258">
+          <caret line="1721" column="36" selection-start-line="1721" selection-start-column="36" selection-end-line="1721" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc">
+    <entry file="file://$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="401">
+          <caret line="69" column="28" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="28" />
           <folding>
-            <element signature="e#117#139#0" expanded="true" />
+            <element signature="e#106#128#0" expanded="true" />
           </folding>
         </state>
       </provider>
