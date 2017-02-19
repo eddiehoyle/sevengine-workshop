@@ -15,6 +15,8 @@
 #include <sev/graphics/render/ParticleRender.hh>
 #include <sev/graphics/shader/ShaderManager.hh>
 #include <sev/graphics/texture/TextureManager2D.hh>
+#include <sev/graphics/font/FontParser.hh>
+#include <sev/graphics/font/Char.hh>
 
 #include <iostream>
 #include <ctime> // Needed for the true randomization
@@ -63,17 +65,16 @@ void ExampleParticles::initializeGL() {
 
     initializeOpenGLFunctions();
 
-    glClearColor(1, 0.35, 0.35, 1);
+    glClearColor( 1, 0.35, 0.35, 1 );
 
     ShaderManager::instance();
 
     // Load bomb
-    const char* path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/grass.png";
-    TextureManager2D::instance()->load( "bomb", path );
+    const char *path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/grass.png";
+    TextureManager2D::instance()->load( "grass", path, true );
 }
 
-void ExampleParticles::paintGL()
-{
+void ExampleParticles::paintGL() {
     ShaderManager::instance()->use( "particle" );
     glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
                                        0.0f, ( float )height(),
@@ -82,8 +83,8 @@ void ExampleParticles::paintGL()
     ShaderManager::instance()->setUnif( "uf_Texture", 0 );
 
     // Tell 'uf_Texture' sampler in fragment shader to use the texture bound to GL_TEXTURE0
-    TextureManager2D::instance()->bind( "bomb", 0 );
-    TextureManager2D::instance()->setResizeMode( GL_NEAREST, GL_NEAREST );
+    TextureManager2D::instance()->bind( "grass", 0 );
+    TextureManager2D::instance()->setResizeMode( GL_LINEAR, GL_LINEAR );
     TextureManager2D::instance()->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
 
@@ -106,7 +107,7 @@ void ExampleParticles::paintGL()
 
         Particle p;
         p.setPosition( glm::vec2( x, y) );
-        p.setSize( 100.0 );
+        p.setSize( 64 );
         p.setColor( 255, 255, 255, 255 );
 
         buffer.add( p );
@@ -128,7 +129,7 @@ void ExampleParticles::paintGL()
 
 void ExampleParticles::cleanup()
 {
-    // TODO
+    TextureManager2D::instance()->unload( "grass" );
 }
 
 }

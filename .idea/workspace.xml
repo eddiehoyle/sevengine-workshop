@@ -16,17 +16,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdda0d6d-0cf9-4759-ab3f-a07e467dc181" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc" afterPath="$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.hh" afterPath="$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.hh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc" afterPath="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.hh" afterPath="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.hh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc" afterPath="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh" afterPath="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/05_freeTypeFont/ExampleFreeTypeFont.hh" afterPath="$PROJECT_DIR$/src/examples/05_freeTypeFont/ExampleFreeTypeFont.hh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc" afterPath="$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh" afterPath="$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.cc" afterPath="$PROJECT_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.hh" afterPath="$PROJECT_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.hh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/MainWindow.cc" afterPath="$PROJECT_DIR$/src/ui/MainWindow.cc" />
     </list>
     <ignored path="sevengine-workshop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,14 +41,86 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ExampleTextureAtlasFont.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="788">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ExampleParticles.cc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="146">
+              <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Char.hh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/font/Char.hh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuadRender.hh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/render/QuadRender.hh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FontParser.hh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/font/FontParser.hh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleTextureAtlasFont.hh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-9">
+              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
               <folding>
-                <element signature="e#106#128#0" expanded="true" />
+                <element signature="e#211#233#0" expanded="true" />
+                <marker date="1487450871000" expanded="true" signature="413:1211" ph="{...}" />
+                <marker date="1487450871000" expanded="true" signature="515:1207" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindow.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/MainWindow.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindow.hh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/MainWindow.hh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,11 +128,9 @@
       <file leaf-file-name="ExampleAnimatedTexturedRect.cc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="89" selection-end-column="24" />
-              <folding>
-                <element signature="e#117#139#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="351">
+              <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Util.hh" />
         <option value="$PROJECT_DIR$/src/examples/01_triangle/Example.hh" />
         <option value="$PROJECT_DIR$/src/examples/02_rect/Example.hh" />
         <option value="$PROJECT_DIR$/resources/03_rectTextured.vert" />
@@ -104,7 +167,6 @@
         <option value="$PROJECT_DIR$/../sevengine/include/sev/graphics/shader/TextureShader.hh" />
         <option value="$PROJECT_DIR$/../sevengine/src/graphics/shader/TextureShader.cc" />
         <option value="$PROJECT_DIR$/../sevengine/include/sev/graphics/shader/AbstractShader.hh" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/../sevengine/src/graphics/shader/AbstractShader.cc" />
         <option value="$PROJECT_DIR$/../sevengine/include/sev/graphics/shader/ShaderManager.hh" />
         <option value="$PROJECT_DIR$/src/examples/01_triangle/ExampleTriangle.hh" />
@@ -118,17 +180,19 @@
         <option value="$PROJECT_DIR$/src/examples/02_rect/ExampleRect.hh" />
         <option value="$PROJECT_DIR$/../sevengine/include/sev/graphics/texture/TextureManager2D.hh" />
         <option value="$PROJECT_DIR$/src/ui/MainWindow.hh" />
-        <option value="$PROJECT_DIR$/src/ui/MainWindow.cc" />
         <option value="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh" />
         <option value="$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.hh" />
         <option value="$PROJECT_DIR$/src/examples/05_freeTypeFont/ExampleFreeTypeFont.hh" />
         <option value="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.hh" />
         <option value="$PROJECT_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.hh" />
-        <option value="$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh" />
-        <option value="$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc" />
         <option value="$PROJECT_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.cc" />
         <option value="$PROJECT_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc" />
         <option value="$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/../sevengine/include/sev/graphics/font/FontParser.hh" />
+        <option value="$PROJECT_DIR$/src/ui/MainWindow.cc" />
+        <option value="$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh" />
+        <option value="$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc" />
         <option value="$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc" />
       </list>
     </option>
@@ -287,7 +351,85 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="06_textureAtlasFont" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="05_freeTypeFont" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="04_animatedTexturedRect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sevengine-workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="03_texturedRect" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -579,7 +721,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32599118" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21585903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21585903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -638,27 +780,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/core/Transform.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/simple.vert">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/simple.frag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/AbstractExample.hh" />
     <entry file="file:///usr/local/include/freetype2/ft2build.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -749,9 +870,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding>
-            <marker date="1485581049000" expanded="true" signature="0:32" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -767,14 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -862,9 +973,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-          <folding>
-            <marker date="1486024703000" expanded="true" signature="2291:2292" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -872,29 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding>
-            <marker date="1486371043000" expanded="true" signature="0:44" ph="//..." />
-            <marker date="1486371043000" expanded="true" signature="82:1566" ph="..." />
-            <marker date="1486371043000" expanded="true" signature="156:220" ph="..." />
-            <marker date="1486371043000" expanded="true" signature="222:267" ph="/.../" />
-            <marker date="1486371043000" expanded="true" signature="269:388" ph="/.../" />
-            <marker date="1486371043000" expanded="true" signature="413:1565" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/MainWindow.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/MainWindow.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -912,7 +998,7 @@
         <state relative-caret-position="39">
           <caret line="509" column="0" selection-start-line="509" selection-start-column="0" selection-end-line="509" selection-end-column="0" />
           <folding>
-            <element signature="e#22056#25979#0" expanded="true" />
+            <element signature="e#22056#25979#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -921,9 +1007,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <marker date="1486285949000" expanded="true" signature="1939:2047" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +1040,7 @@
         <state relative-caret-position="26">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#248#270#0" expanded="true" />
+            <element signature="e#248#270#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -969,16 +1053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="e#211#233#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -987,30 +1061,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="61" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#212#234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/05_freeTypeFont/ExampleFreeTypeFont.hh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
           <folding>
-            <element signature="e#211#233#0" expanded="true" />
+            <element signature="e#211#233#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1020,7 +1076,7 @@
         <state relative-caret-position="86">
           <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
           <folding>
-            <element signature="e#109#131#0" expanded="true" />
+            <element signature="e#109#131#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1033,23 +1089,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/MainWindow.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/MainWindow.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <element signature="e#211#233#0" expanded="true" />
+            <marker date="1487450871000" expanded="true" signature="413:1211" ph="{...}" />
+            <marker date="1487450871000" expanded="true" signature="515:1207" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="89" selection-end-column="24" />
-          <folding>
-            <element signature="e#117#139#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="351">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/font/FontParser.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/render/QuadRender.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sevengine/include/sev/graphics/font/Char.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/02_particles/ExampleParticles.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding>
-            <element signature="e#106#128#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="146">
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

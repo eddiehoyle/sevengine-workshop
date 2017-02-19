@@ -16,6 +16,9 @@
 
 #include <sev/graphics/Texture.hh>
 
+#include <sev/graphics/font/Char.hh>
+#include <sev/graphics/font/FontParser.hh>
+
 namespace E06 {
 
 class ExampleTextureAtlasFont
@@ -45,6 +48,9 @@ public:
 public slots:
     void cleanup();
     void animate();
+
+private:
+    font::CharSet m_charSet;
 };
 
 }

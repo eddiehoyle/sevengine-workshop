@@ -50,8 +50,8 @@ MainWindow::MainWindow()
 //    setExperiment( kExampleRectTextureAlpha );
 //    combo->setCurrentIndex( 3 );
 
-    setExperiment( kExampleParticles );
-    combo->setCurrentIndex( 1 );
+    setExperiment( kExampleAtlasFont );
+    combo->setCurrentIndex( 5 );
 }
 
 void MainWindow::change( int index )
