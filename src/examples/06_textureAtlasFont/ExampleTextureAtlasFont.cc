@@ -11,8 +11,8 @@
 #include <sev/Utilities.hh>
 #include <sev/core/Transform.hh>
 
-#include <sev/graphics/font/Char.hh>
-#include <sev/graphics/font/FontParser.hh>
+#include <sev/graphics/text/Glyph.hh>
+#include <sev/graphics/text/FontParser.hh>
 #include <QTimer>
 
 #include <glm/glm.hpp>
@@ -22,6 +22,7 @@
 #include <sev/graphics/shader/ShaderManager.hh>
 #include <sev/graphics/texture/TextureManager2D.hh>
 #include <sev/graphics/render/QuadRender.hh>
+#include <sev/graphics/text/Block.hh>
 #include FT_FREETYPE_H
 #include FT_TYPES_H
 
@@ -88,37 +89,55 @@ void ExampleTextureAtlasFont::paintGL() {
 
     // ----------------------------------------------------------------
 
-    font::Char h = font::getChar( m_charSet, ( int )'h' );
-    font::Char e = font::getChar( m_charSet, ( int )'e' );
-    font::Char y = font::getChar( m_charSet, ( int )'y' );
+//    font::Char h = font::fromChar( m_charSet, 'h' );
+//    font::Char e = font::fromChar( m_charSet, 'e' );
+//    font::Char y = font::fromChar( m_charSet, 'y' );
+//
+//    Quad hQuad( h.width, h.height );
+//    Quad eQuad( e.width, e.height );
+//    Quad yQuad( y.width, y.height );
+//
+//    hQuad.setUV( h.uvs[0], h.uvs[1], h.uvs[2], h.uvs[3] );
+//    eQuad.setUV( e.uvs[0], e.uvs[1], e.uvs[2], e.uvs[3] );
+//    yQuad.setUV( y.uvs[0], y.uvs[1], y.uvs[2], y.uvs[3] );
+//
+//    Transform hTransform;
+//    Transform eTransform;
+//    Transform yTransform;
+//
+//    hTransform.setPosition( glm::vec2( 120, 100 ) );
+//    eTransform.setPosition( glm::vec2( 150, 110 ) );
+//    eTransform.setAngle( 10 );
+//    yTransform.setPosition( glm::vec2( 190, 90 ) );
+//    yTransform.setAngle(-15);
+//
+//    hQuad.setMatrix( hTransform.getMatrix() );
+//    eQuad.setMatrix( eTransform.getMatrix() );
+//    yQuad.setMatrix( yTransform.getMatrix() );
+//
+//
+//    BufferQuad buffer;
+//    buffer.add( hQuad );
+//    buffer.add( eQuad );
+//    buffer.add( yQuad );
 
-    Quad hQuad( h.width, h.height );
-    Quad eQuad( e.width, e.height );
-    Quad yQuad( y.width, y.height );
 
-    hQuad.setUV( h.uvs[0], h.uvs[1], h.uvs[2], h.uvs[3] );
-    eQuad.setUV( e.uvs[0], e.uvs[1], e.uvs[2], e.uvs[3] );
-    yQuad.setUV( y.uvs[0], y.uvs[1], y.uvs[2], y.uvs[3] );
+    TextBlock block;
+    block.setLineWidth( 25 );
+    block.setLineHeight( 50 );
+    block.setGlyphScale( 1.0 );
+    block.setSpaceScale( 3.0 );
+    block.setText( "TEST WORDS" );
 
-    Transform hTransform;
-    Transform eTransform;
-    Transform yTransform;
+    Transform transform;
+    transform.setPosition( 050, 50 );
+    block.setMatrix( transform.getMatrix() );
 
-    hTransform.setPosition( glm::vec2( 120, 100 ) );
-    eTransform.setPosition( glm::vec2( 150, 110 ) );
-    eTransform.setAngle( 10 );
-    yTransform.setPosition( glm::vec2( 190, 90 ) );
-    yTransform.setAngle(-15);
-
-    hQuad.setMatrix( hTransform.getMatrix() );
-    eQuad.setMatrix( eTransform.getMatrix() );
-    yQuad.setMatrix( yTransform.getMatrix() );
-
+    Quads quads;
+    block.getQuads( m_charSet, quads );
 
     BufferQuad buffer;
-    buffer.add( hQuad );
-    buffer.add( eQuad );
-    buffer.add( yQuad );
+    buffer.add( quads );
 
     QuadRender render = QuadRender( buffer );
     render.bind();

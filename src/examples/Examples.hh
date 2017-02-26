@@ -12,5 +12,6 @@
 #include "src/examples/05_freeTypeFont/ExampleFreeTypeFont.hh"
 #include "src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh"
 #include "src/examples/07_multiTexture/ExampleMultiTexture.hh"
+#include "src/examples/08_lines/ExampleLines.hh"
 
 #endif //SEVENGINE_WORKSHOP_EXAMPLES_HH

@@ -15,8 +15,6 @@
 #include <sev/graphics/render/ParticleRender.hh>
 #include <sev/graphics/shader/ShaderManager.hh>
 #include <sev/graphics/texture/TextureManager2D.hh>
-#include <sev/graphics/font/FontParser.hh>
-#include <sev/graphics/font/Char.hh>
 
 #include <iostream>
 #include <ctime> // Needed for the true randomization

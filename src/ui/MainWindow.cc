@@ -50,8 +50,8 @@ MainWindow::MainWindow()
 //    setExperiment( kExampleRectTextureAlpha );
 //    combo->setCurrentIndex( 3 );
 
-    setExperiment( kExampleAtlasFont );
-    combo->setCurrentIndex( 5 );
+    setExperiment( kExampleLines );
+    combo->setCurrentIndex( 7 );
 }
 
 void MainWindow::change( int index )
@@ -89,6 +89,9 @@ void MainWindow::setExperiment( ExampleType type )
             break;
         case kExampleMultiTexture:
             m_gl = new E07::ExampleMultiTexture();
+            break;
+        case kExampleLines:
+            m_gl = new E08::ExampleLines();
             break;
         default:
             m_gl = new E01::ExampleTriangle();

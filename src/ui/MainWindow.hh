@@ -8,13 +8,14 @@
 #include <QOpenGLWindow>
 
 enum ExampleType {
-    kExampleTriangle     = 0,
-    kExampleParticles    = 1,
-    kExampleRectTexture = 2,
+    kExampleTriangle         = 0,
+    kExampleParticles        = 1,
+    kExampleRectTexture      = 2,
     kExampleRectTextureAlpha = 3,
-    kExampleText = 4,
-    kExampleAtlasFont = 5,
-    kExampleMultiTexture = 6
+    kExampleText             = 4,
+    kExampleAtlasFont        = 5,
+    kExampleMultiTexture     = 6,
+    kExampleLines            = 7
 };
 
 class MainWindow : public QMainWindow

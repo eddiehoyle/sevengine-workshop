@@ -7,17 +7,19 @@
       <sourceFolder url="file://$MODULE_DIR$/src/examples/03_texturedRect/ExampleTexturedRect.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/04_animatedTexturedRect/ExampleAnimatedTexturedRect.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/02_particles/ExampleParticles.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/02_particles/ExampleParticles.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/01_triangle/ExampleTriangle.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/01_triangle/ExampleTriangle.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/07_multiTexture/ExampleMultiTexture.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/05_freeTypeFont/ExampleFreeTypeFont.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/05_freeTypeFont/ExampleFreeTypeFont.hh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/02_particles/ExampleParticles.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/02_particles/ExampleParticles.hh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/examples/Examples.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/Examples.hh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/08_lines/ExampleLines.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/examples/08_lines/ExampleLines.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/ui/MainWindow.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/ui/MainWindow.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Util.hh" isTestSource="false" />

@@ -16,8 +16,8 @@
 
 #include <sev/graphics/Texture.hh>
 
-#include <sev/graphics/font/Char.hh>
-#include <sev/graphics/font/FontParser.hh>
+#include <sev/graphics/text/Glyph.hh>
+#include <sev/graphics/text/FontParser.hh>
 
 namespace E06 {
 

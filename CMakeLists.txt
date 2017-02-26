@@ -38,7 +38,7 @@ include_directories(${SEV_INCLUDE_DIR})
 # Source files
 file(GLOB_RECURSE SOURCE_FILES "*.cc" "*.hh")
 
-add_executable(${APP} ${SOURCE_FILES} src/examples/07_multiTexture/ExampleMultiTexture.cc src/examples/07_multiTexture/ExampleMultiTexture.hh)
+add_executable(${APP} ${SOURCE_FILES} src/examples/07_multiTexture/ExampleMultiTexture.cc src/examples/07_multiTexture/ExampleMultiTexture.hh src/examples/08_lines/ExampleLines.cc src/examples/08_lines/ExampleLines.hh)
 
 # Link the helloworld executable to the Qt 5 widgets library.
 target_link_libraries(${APP}
