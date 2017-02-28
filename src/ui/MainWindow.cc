@@ -34,6 +34,7 @@ MainWindow::MainWindow()
     items << "Font";
     items << "Atlas Font Texture";
     items << "Multi Texture";
+    items << "Lines";
 
     combo->addItems( items );
 

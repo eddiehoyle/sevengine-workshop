@@ -72,9 +72,6 @@ void ExampleTextureAtlasFont::initializeGL() {
 
 void ExampleTextureAtlasFont::paintGL() {
 
-//    std::cerr << "ExampleTextureAtlasFont::paintGL()" << std::endl;
-
-
     ShaderManager::instance()->use( "texture" );
     glm::mat4 projection = glm::ortho( 0.0f, ( float )width(),
                                        0.0f, ( float )height(),
@@ -121,6 +118,7 @@ void ExampleTextureAtlasFont::paintGL() {
 //    buffer.add( eQuad );
 //    buffer.add( yQuad );
 
+    // ----------------------------------------------------------------
 
     TextBlock block;
     block.setLineWidth( 25 );
@@ -131,7 +129,6 @@ void ExampleTextureAtlasFont::paintGL() {
 
     Transform transform;
     transform.setPosition( 050, 50 );
-    block.setMatrix( transform.getMatrix() );
 
     Quads quads;
     block.getQuads( m_charSet, quads );
@@ -147,14 +144,14 @@ void ExampleTextureAtlasFont::paintGL() {
     render.draw();
     render.release();
 
+    block.setMatrix( transform.getMatrix() );
     buffer.clear();
     ShaderManager::instance()->disable();
     ShaderManager::instance()->release();
 }
 
-void ExampleTextureAtlasFont::cleanup()
-{
-//    TextureManager2D::instance()->unload( "font" );
+void ExampleTextureAtlasFont::cleanup() {
+    TextureManager2D::instance()->unload( "font" );
 }
 
 }

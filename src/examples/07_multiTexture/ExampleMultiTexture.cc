@@ -67,7 +67,7 @@ void ExampleMultiTexture::initializeGL() {
 
     TextureManager2D::instance()->load( "bomb", bombPath );
     TextureManager2D::instance()->load( "cat", catPath );
-    TextureManager2D::instance()->load( "cat", cat2Path );
+    TextureManager2D::instance()->load( "cat2", cat2Path );
 }
 
 void ExampleMultiTexture::paintGL() {
@@ -79,7 +79,7 @@ void ExampleMultiTexture::paintGL() {
 
     TextureManager2D::instance()->enable();
     TextureManager2D::instance()->bind( "bomb", 0 );
-    TextureManager2D::instance()->bind( "bomb", 1 );
+    TextureManager2D::instance()->bind( "cat", 1 );
 
     // --------------------------------------------------------------------------------
 
@@ -144,14 +144,16 @@ void ExampleMultiTexture::paintGL() {
 
     ShaderManager::instance()->disable();
     ShaderManager::instance()->release();
-//    Texture2D::release( m_bomb );
-//    Texture2D::release( m_cat );
+
 
 }
 
 void ExampleMultiTexture::cleanup()
 {
-    qDebug( "Cleaning up" );
+    TextureManager2D::instance()->unload( "bomb" );
+    TextureManager2D::instance()->unload( "cat" );
+    TextureManager2D::instance()->unload( "cat2" );
+
 }
 
 }

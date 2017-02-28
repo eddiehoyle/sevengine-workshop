@@ -13,6 +13,7 @@
 
 #include <sev/graphics/Texture.hh>
 #include <sev/graphics/shader/ShaderManager.hh>
+#include <QMouseEvent>
 
 namespace E08 {
 
@@ -33,6 +34,9 @@ public slots:
 
     void cleanup();
     void animate();
+
+    void mouseMoveEvent( QMouseEvent* event ) Q_DECL_OVERRIDE;
+
 
 };
 
