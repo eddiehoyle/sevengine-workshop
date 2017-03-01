@@ -116,7 +116,7 @@ void ExampleTexturedRect::paintGL()
     d.setMatrix( transformD.getMatrix() );
     d.setColor( 255, 255, 255, 50 );
 
-    BufferQuad buffer = BufferQuad();
+    QuadBuffer buffer = QuadBuffer();
     buffer.add( a );
     buffer.add( b );
     buffer.add( c );

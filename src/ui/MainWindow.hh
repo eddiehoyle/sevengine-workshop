@@ -15,7 +15,8 @@ enum ExampleType {
     kExampleText             = 4,
     kExampleAtlasFont        = 5,
     kExampleMultiTexture     = 6,
-    kExampleLines            = 7
+    kExampleLines            = 7,
+    kExampleAudio            = 8,
 };
 
 class MainWindow : public QMainWindow
@@ -30,6 +31,7 @@ private:
     void cleanup();
 
 private:
+    QWidget* m_audio;
     QOpenGLWidget* m_gl;
     QVBoxLayout* m_layout;
 

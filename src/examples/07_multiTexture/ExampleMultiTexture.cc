@@ -97,7 +97,7 @@ void ExampleMultiTexture::paintGL() {
     bombQuad.setUV( 0.0, 1.0, 0.0, 1.0 );
     bombQuad.setMatrix( transform.getMatrix() );
 
-    BufferQuad bombBuffer = BufferQuad();
+    QuadBuffer bombBuffer = QuadBuffer();
     bombBuffer.add( bombQuad );
 
     QuadRender bombRender = QuadRender( bombBuffer );
@@ -124,7 +124,7 @@ void ExampleMultiTexture::paintGL() {
     catTransform.setPosition( glm::vec2( 200, 0 ) );
     catQuad.setMatrix( catTransform.getMatrix() );
 
-    BufferQuad catBuffer;
+    QuadBuffer catBuffer;
     catBuffer.add( catQuad );
 
     QuadRender catRender = QuadRender( catBuffer );

@@ -13,5 +13,6 @@
 #include "src/examples/06_textureAtlasFont/ExampleTextureAtlasFont.hh"
 #include "src/examples/07_multiTexture/ExampleMultiTexture.hh"
 #include "src/examples/08_lines/ExampleLines.hh"
+#include "src/examples/09_audio/ExampleAudio.hh"
 
 #endif //SEVENGINE_WORKSHOP_EXAMPLES_HH

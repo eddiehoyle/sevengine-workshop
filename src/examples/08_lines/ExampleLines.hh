@@ -34,7 +34,6 @@ public slots:
 
     void cleanup();
     void animate();
-
     void mouseMoveEvent( QMouseEvent* event ) Q_DECL_OVERRIDE;
 
 

@@ -133,7 +133,7 @@ void ExampleTextureAtlasFont::paintGL() {
     Quads quads;
     block.getQuads( m_charSet, quads );
 
-    BufferQuad buffer;
+    QuadBuffer buffer;
     buffer.add( quads );
 
     QuadRender render = QuadRender( buffer );

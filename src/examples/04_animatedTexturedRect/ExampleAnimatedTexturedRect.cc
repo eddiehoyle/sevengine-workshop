@@ -128,7 +128,7 @@ void ExampleAnimatedTexturedRect::paintGL()
     TextureManager2D::instance()->setWrapMode( GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE );
 
     // Create quads
-    BufferQuad buffer = BufferQuad();
+    QuadBuffer buffer = QuadBuffer();
 
     int size = 100;
     for ( int index = 0; index < m_positions.size(); index++ ) {

@@ -15,7 +15,9 @@
 
 
 MainWindow::MainWindow()
-{
+        : m_gl(),
+          m_audio() {
+
     setWindowTitle( "Sevengine - Workshop" );
 
     QWidget* widget = new QWidget();
@@ -35,6 +37,7 @@ MainWindow::MainWindow()
     items << "Atlas Font Texture";
     items << "Multi Texture";
     items << "Lines";
+    items << "Audio";
 
     combo->addItems( items );
 
@@ -48,11 +51,8 @@ MainWindow::MainWindow()
 
     m_layout->addLayout( optionLayout );
 
-//    setExperiment( kExampleRectTextureAlpha );
-//    combo->setCurrentIndex( 3 );
-
-    setExperiment( kExampleLines );
-    combo->setCurrentIndex( 7 );
+    setExperiment( kExampleAudio );
+    combo->setCurrentIndex( 8 );
 }
 
 void MainWindow::change( int index )
@@ -64,6 +64,7 @@ void MainWindow::change( int index )
 void MainWindow::cleanup()
 {
     if ( m_gl ) { delete m_gl; }
+    if ( m_audio ) { delete m_audio; }
 }
 
 void MainWindow::setExperiment( ExampleType type )
@@ -94,12 +95,20 @@ void MainWindow::setExperiment( ExampleType type )
         case kExampleLines:
             m_gl = new E08::ExampleLines();
             break;
+        case kExampleAudio:
+            m_audio = new E09::ExampleAudio();
+            break;
         default:
             m_gl = new E01::ExampleTriangle();
             break;
     }
-    m_gl->setFormat( QSurfaceFormat::defaultFormat() );
-    m_layout->addWidget( m_gl );
+
+    if ( m_gl ) {
+        m_layout->addWidget( m_gl );
+        m_gl->setFormat( QSurfaceFormat::defaultFormat() );
+    } else {
+        m_layout->addWidget( m_audio );
+    }
 }
 
 
