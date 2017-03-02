@@ -29,7 +29,8 @@ public:
 
 public slots:
     void mousePressEvent( QMouseEvent* event ) Q_DECL_OVERRIDE;
-    void playSimple();
+    void playBell();
+    void playBoing();
 
 };
 

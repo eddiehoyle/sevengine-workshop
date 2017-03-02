@@ -23,11 +23,15 @@ find_package(OpenGL REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(SOIL REQUIRED)
 find_package(Freetype REQUIRED)
+find_package(OpenAL REQUIRED)
 
 # Includes
-include_directories(${Qt5Widgets_INCLUDE_DIRS})
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-include_directories(${FREETYPE_INCLUDE_DIRS})
+include_directories(
+        ${Qt5Widgets_INCLUDE_DIRS}
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${FREETYPE_INCLUDE_DIRS}
+        ${OPENAL_INCLUDE_DIR}
+)
 
 # Temporary sevengine location
 set(SEV_ROOT /Users/eddiehoyle/Code/cpp/game/sevengine)
@@ -46,7 +50,9 @@ target_link_libraries(${APP}
         ${OPENGL_LIBRARIES}
         ${SOIL_LIBRARY}
         ${SEV_LIB}
-        ${FREETYPE_LIBRARIES})
+        ${FREETYPE_LIBRARIES}
+        ${OPENAL_LIBRARY}
+)
 
 # If Apple...
 target_link_libraries(${APP} "-framework OpenGL")
