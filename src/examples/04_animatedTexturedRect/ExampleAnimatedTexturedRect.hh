@@ -39,6 +39,8 @@ private:
     // Flame positions
     std::vector< std::pair< int, int > > m_positions;
 
+    std::time_t m_time;
+
 };
 
 }

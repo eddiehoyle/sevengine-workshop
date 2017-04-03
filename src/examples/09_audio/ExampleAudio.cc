@@ -35,6 +35,7 @@ ExampleAudio::ExampleAudio(QWidget *parent)
     bellLayout->addWidget( bellButtonStop );
 
     connect( bellButtonPlay, SIGNAL( clicked() ), this, SLOT( playBell() ) );
+    connect( bellButtonStop, SIGNAL( clicked() ), this, SLOT( stop() ) );
     layout->addRow( bellLabel, bellLayout );
 
     QLabel* boingLabel = new QLabel( "Boing" );
@@ -45,7 +46,10 @@ ExampleAudio::ExampleAudio(QWidget *parent)
     boingLayout->addWidget( boingButtonStop );
 
     connect( boingButtonPlay, SIGNAL( clicked() ), this, SLOT( playBoing() ) );
+    connect( boingButtonStop, SIGNAL( clicked() ), this, SLOT( stop() ) );
     layout->addRow( boingLabel, boingLayout );
+
+    AudioManager2::instance();
 }
 
 ExampleAudio::~ExampleAudio() {
@@ -54,13 +58,26 @@ ExampleAudio::~ExampleAudio() {
 void ExampleAudio::playBell() {
     std::cerr << "Playing: Bicycle Bell" << std::endl;
     const std::string path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/audio/bell.wav";
-    AudioManager::instance()->play( path );
+    AudioBuffer buffer( path );
+//    AudioManager::instance()->play( path );
+    AudioManager2::instance()->acquire( "bell" );
+    AudioManager2::instance()->play( "bell" );
+//    AudioManager2::instance()->release( "bell" );
 }
 
 void ExampleAudio::playBoing() {
     std::cerr << "Playing: Boing" << std::endl;
     const std::string path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/audio/boing.wav";
-    AudioManager::instance()->play( path );
+    AudioBuffer buffer( path );
+//    AudioManager::instance()->play( path );
+    AudioManager2::instance()->acquire( "boing" );
+    AudioManager2::instance()->play( "boing" );
+//    AudioManager2::instance()->release( "boing" );
+}
+
+void ExampleAudio::stop() {
+    AudioManager2::instance()->stop( "bell" );
+    AudioManager2::instance()->stop( "boing" );
 }
 
 void ExampleAudio::mousePressEvent( QMouseEvent* event ) {

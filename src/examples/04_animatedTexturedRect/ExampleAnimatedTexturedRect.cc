@@ -22,9 +22,9 @@
 #include <ctime> // Needed for the true randomization
 #include <cstdlib>
 #include <random>
+#include <sev/audio/AudioManager.hh>
 
-
-
+#include <ctime>
 
 int getRandom( int floor, int ceiling ) {
     srand(time(0));
@@ -72,6 +72,19 @@ void ExampleAnimatedTexturedRect::animate()
     position.y = std::sin( translateY += 0.1f ) * 20;
     position.y += 50.0f;
     position.x = ( float )( width() / 2 ) - 50;
+
+//    std::time_t t = std::time(0);
+//    if ( m_time != t ) {
+//
+//        std::string path;
+//        if ( t % 2 == 0 ) {
+//            path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/audio/bell.wav";
+//        } else {
+//            path = "/Users/eddiehoyle/Code/cpp/game/sevengine-workshop/resources/audio/boing.wav";
+//        }
+//        AudioManager::instance()->play( path );
+//        m_time = t;
+//    }
 
     // Schedule paint
     update();
