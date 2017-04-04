@@ -32,6 +32,8 @@ public slots:
 
     void playBell();
     void playBoing();
+    void playBird();
+    void playChicken();
 
     void stop();
 
