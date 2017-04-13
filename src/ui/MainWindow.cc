@@ -65,6 +65,8 @@ void MainWindow::cleanup()
 {
     if ( m_gl ) { delete m_gl; }
     if ( m_audio ) { delete m_audio; }
+    m_gl = NULL;
+    m_audio = NULL;
 }
 
 void MainWindow::setExperiment( ExampleType type )
